@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SERID</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <h1>Pantalla de Entrega</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 text-left">
+      <button class="btn btn-primary">Unidades Administrativas</button>&nbsp;
+    </div>
+    <div class="col-md-10 text-right">
+      <button class="btn btn-primary">Notificaciones</button>&nbsp;
+      <button class="btn btn-warning">Observaciones</button>&nbsp;
+      <button class="btn btn-success">Respuestas</button>&nbsp;
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  Anexos
+  <div class="row">
+    <div class="col-md-10">
+      <select class="form-control" id="Anexos">
+        <option value="1">Anexo 1</option>
+        <option value="2">Anexo 2</option>
+        <option value="3">Anexo 3</option>
+        <option value="4">Anexo 4</option>
+        <option value="5">Anexo 5</option>
+        <option value="6">Anexo 6</option>
+        <option value="7">Anexo 7</option>
+        <option value="8">Anexo 8</option>
+        <option value="9">Anexo 9</option>
+        <option value="10">Anexo 10</option>
+        <option value="11">Anexo 11</option>
+        <option value="12">Anexo 12</option>
+        <option value="13">Anexo 13</option>
+        <option value="14">Anexo 14</option>
+        <option value="15">Anexo 15</option>
+        <option value="16">Anexo 16</option>
+        <option value="17">Anexo 17</option>
+        <option value="18">Anexo 18</option>
+        <option value="19">Anexo 19</option>
+        <option value="20">Anexo 20</option>
+        <option value="21">Anexo 21</option>
+        <option value="22">Anexo 22</option>
+        <option value="23">Anexo 23</option>
+        <option value="24">Anexo 24</option>
+        <option value="25">Anexo 25</option>
+        <option value="26">Anexo 26</option>
+        <option value="27">Anexo 27</option>
+        <option value="28">Anexo 28</option>
+        <option value="29">Anexo 29</option>
+        <option value="30">Anexo 30</option>
+        <option value="31">Anexo 31</option>
+        <option value="32">Anexo 32</option>
+        <option value="33">Anexo 33</option>
+        <option value="34">Anexo 34</option>
+        <option value="35">Anexo 35</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary" onclick="AnexoElegido()">Verificar Datos</button>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container" id="ConstruccionAnexo" style="display: none;">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-3 text-left">
+          <button class="btn btn-primary">Leyes Aplicables</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <p id="TituloAnexo"></p>
+        </div>
+        <div class="col-md-3 text-right">
+          <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+        </div>
+      </div>
+
+      <!-- Contenido 1 -->
+      <br>
+      <div class="card">
+        <div class="card-body">
+  
+          <!-- Tabla 1 -->
+          Plan de Desarrollo Municipal
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Periodo</th>
+                  <th scope="col">Fecha de Presentación en ASEP</th>
+                  <th scope="col">Folio de Recibo de ASEP</th>
+                  <th scope="col">Fecha de Publicación <strong>(Periódico)</strong></th>
+                  <th scope="col">Agregar</th>
+                </tr>
+              </thead>
+              <tbody id="CuerpoTabla1">
+                <tr>
+                  <td>
+                    <input type="text" class="form-control" id="Periodo1">
+                  </td>
+                  <td>
+                    <input type="date" class="form-control" id="FechaPresentacion">
+                  </td>
+                  <td>
+                    <input type="text" class="form-control" id="Folio">
+                  </td>
+                  <td>
+                    <input type="date" class="form-control" id="FechaPublicacion">
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" onclick="AgregarFila1()">Agregar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>        
+          <!-- Tabla 1 -->
+  
+        </div>
+      </div>
+      <!-- Contenido 1 -->
+
+      <!-- Contenido 2 -->
+      <br>
+      <div class="card">
+        <div class="card-body">
+  
+          <!-- Tabla 2 -->
+          Cumplimiento al Plan de Desarrollo Municipal 2018-2021
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Periodo</th>
+                  <th scope="col">Cumple con las especificaciones de la Ley Orgánica Municipal</th>
+                  <th scope="col">Cumple con la Metodología de Marco Lógico</th>
+                  <th scope="col">Agregar</th>
+                </tr>
+              </thead>
+              <tbody id="CuerpoTabla2">
+                <tr>
+                  <td>
+                    <input type="text" class="form-control" id="Periodo2">
+                  </td>
+                  <td>
+                    <input type="text" class="form-control" id="Cumple1">
+                  </td>
+                  <td>
+                    <input type="text" class="form-control" id="Cumple2">
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" onclick="AgregarFila2()">Agregar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>        
+          <!-- Tabla 2 -->
+  
+        </div>
+      </div>
+      <!-- Contenido 2 -->
+
+      <!-- Boton para generar -->
+      <br>
+      <div class="row">
+        <div class="col text-center">
+          <button class="btn btn-success">Generar Formato</button>
+        </div>
+      </div>
+      <!-- Boton para generar -->
+
+    </div>
+  </div>
+</div>
+
+
+<br>
+<div class="container">
+  <button class="btn btn-primary" type="button">
+      <a href="elegir_rol.html" style="color: white;">
+          Regresar
+      </a>
+  </button>
+</div>
+
+<!-- Modal Revision Semaforo -->
+<div class="modal fade" id="RevisionModal" tabindex="-1" role="dialog" aria-labelledby="RevisionModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Avance de Revisión</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Júridico</label>
+            </div>
+            <div class="form-group col-md-7">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-danger">Enviado</button>
+                <button type="button" class="btn btn-outline-warning">Revisando</button>
+                <button type="button" class="btn btn-outline-success">Validado</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Administrativo</label>
+            </div>
+            <div class="form-group col-md-7">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-danger">Enviado</button>
+                <button type="button" class="btn btn-warning">Revisando</button>
+                <button type="button" class="btn btn-outline-success">Validado</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Presupuestal</label>
+            </div>
+            <div class="form-group col-md-7">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-danger">Enviado</button>
+                <button type="button" class="btn btn-outline-warning">Revisando</button>
+                <button type="button" class="btn btn-outline-success">Validado</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Jefe Inmediato</label>
+            </div>
+            <div class="form-group col-md-7">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-danger">Enviado</button>
+                <button type="button" class="btn btn-outline-warning">Revisando</button>
+                <button type="button" class="btn btn-success">Validado</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Revision Semaforo -->
+<script>
+function AnexoElegido(){
+  $('#TituloAnexo').html('Mostrando Anexo #' + $('#Anexos').val());
+  $('#ConstruccionAnexo').show();
+}
+
+function AgregarFila1(){
+  var Periodo1 = $('#Periodo1').val();
+  var FechaPresentacion = $('#FechaPresentacion').val();
+  var Folio = $('#Folio').val();
+  var FechaPublicacion = $('#FechaPublicacion').val();
+
+  $('#CuerpoTabla1').append("<tr>" + 
+                              "<td>" + Periodo1 + "</td>" +
+                              "<td>" + FechaPresentacion + "</td>" +
+                              "<td>" + Folio + "</td>" +
+                              "<td>" +  FechaPublicacion + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarFila2(){
+  var Periodo2 = $('#Periodo2').val();
+  var Cumple1 = $('#Cumple1').val();
+  var Cumple2 = $('#Cumple2').val();
+
+  $('#CuerpoTabla2').append("<tr>" + 
+                              "<td>" + Periodo2 + "</td>" +
+                              "<td>" + Cumple1 + "</td>" +
+                              "<td>" + Cumple2 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function QuitarFila(row){
+  $(row).closest("tr").remove();
+}
+
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="bg-primary text-white text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Footer Content</h5>
+  
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+            voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Recursos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Recursos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="color: white;">Recursos de Ayuda 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright
+    </div>
+    <!-- Copyright -->
+  
+</footer>
+
+</body>
+</html>
