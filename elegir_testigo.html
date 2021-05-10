@@ -11,85 +11,80 @@
 
 <body>
 <div class="jumbotron text-center">
-  <h1>Elegir Rol</h1>
+  <h1>Elegir Testigo</h1>
 </div>
-  
+
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Entregas</h5>
-          <p class="card-text">La persona que entrega</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Entrega')">Iniciar como quien Entrega</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Testigo</h5>
-          <p class="card-text">Participación como testigo</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Testigo')">Iniciar como testigo</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Recepciones</h5>
-          <p class="card-text">Servidor público que recibe</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Recibe')">Iniciar como quien Recibe</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Control Interno</h5>
-          <p class="card-text">Orgáno de Control interno</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Control')">Iniciar como control Interno</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-  <div class="row">
-    <div class="col text-left">
-      <button type="button" class="btn btn-primary">
-        <a href="index.html" style="color: white;">
-          Regresar
-        </a>
-    </button>
-    </div>
-  </div>
+    <form>
+        <!-- Datos Personales -->
+        <div class="form-group">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Elección de Testigo</h5>
+                <form>
+                  <div class="form-row">
+                    <div class="col">
+                        <label for="exampleInputPassword1">Testigo:</label>
+                        <input type="text" class="form-control" placeholder="Nombre Completo de Testigo">
+                    </div>
+                  </div><br>
+                  <div class="form-row">
+                    <div class="col-md-12">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          1.- El documento debe ser en .pdf
+                        </li>
+                        <li class="list-group-item">
+                          2.- Todo el contenido debe verse en una sola hoja.
+                        </li>
+                        <li class="list-group-item">
+                          3.- Solo puede anexar una identificación INE o un pasaporte vigente.
+                        </li>
+                        <li class="list-group-item">
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="col text-right">
+                        <button class="btn btn-primary" type="button">
+                            Enviar a Contraloría
+                        </button>
+                      </div>
+                  </div>
+                </form>
+              </div>
+              <br>
+              <div class="card-footer">
+                <small>* Se requiere especial atención a la ortografía de la información que ingrese, ya que es información que se verá reflejada dentro de documentos oficiales.</small>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- Datos Personales -->
+    </form>
 </div>
 
-<script>
-  function ElegirRol(rol){
-    switch (rol) {
-    case 'Entrega':
-      window.location.href = 'elegir_testigo.html';
-      break;
-    case 'Testigo':
-      window.location.href = 'testigo.html';
-      break;
-    case 'Recibe':
-      window.location.href = 'recepcion.html';
-      break;
-    case 'Control':
-      window.location.href = 'control.html';
-      break;
-    default:
-      window.location.href = 'index.html';
-      break;
-}
-  }
-</script>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary">
+                <a href="elegir_rol.html" style="color: white;">
+                    Regresar
+                </a>
+            </button>
+        </div>
+        <div class="col text-right">
+            <button class="btn btn-primary">
+                <a href="entrega.html" style="color: white;">
+                    Continuar
+                </a>
+            </button>
+        </div>
+    </div>
+</div>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="bg-primary text-white text-center text-lg-start">
     <!-- Grid container -->

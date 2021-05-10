@@ -16,44 +16,165 @@
   
 <div class="container">
     <form>
+        <!-- Datos Personales -->
         <div class="form-group">
-          <label for="exampleInputEmail1">Nombre Completo:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar nombre completo">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Num de Control:</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar numero de control">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Dirección:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar direccion">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Teléfono:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar telefono">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Correo Institucional:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar correo institucional">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Correo Personal:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar correo personal">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Cargo:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar cargo">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Área de Adscripción:</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar área de adscripción">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Anexar Identificación Oficial</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Datos Personales</h5>
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Nombre Completo:</label>
+                    <input type="text" class="form-control" placeholder="Nombre Completo">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Num. de Control:</label>
+                    <input type="text" class="form-control" placeholder="Numero de Control">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Correo Institucional:</label>
+                    <input type="email" class="form-control" placeholder="Correo Institucional">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Correo Personal:</label>
+                    <input type="email" class="form-control" placeholder="Correo Personal">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Teléfono:</label>
+                    <input type="number" class="form-control" placeholder="Teléfono">
+                  </div><br>
+              </form>
+            </div>
+            <br>
+            <div class="card-footer">
+              <small>* Se requiere especial atención a la ortografía de la información que ingrese, ya que es información que se verá reflejada dentro de documentos oficiales.</small>
+            </div>
           </div>
+        </div>
+        <br>
+        <!-- Datos Personales -->
+
+        <!-- Direccion -->
+        <div class="form-group">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Dirección</h5>
+
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Calle:</label>
+                    <input type="text" class="form-control" placeholder="Calle">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Colonia:</label>
+                    <input type="text" class="form-control" placeholder="Colonia">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Num. Ext:</label>
+                    <input type="number" class="form-control" placeholder="Numero Exterior">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Num. Int:</label>
+                    <input type="number" class="form-control" placeholder="Numero Interior">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Municipio:</label>
+                    <input type="text" class="form-control" placeholder="Municipio">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">C.P.:</label>
+                    <input type="text" class="form-control" placeholder="C.P.">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Estado:</label>
+                    <input type="text" class="form-control" placeholder="Estado">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Referencia:</label>
+                    <input type="text" class="form-control" placeholder="Referencia">
+                  </div>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Direccion -->
+
+        <!-- Area de Adscripcion-->
+        <div class="form-group">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Área de Adscripción</h5>
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Dependencia:</label>
+                    <input type="text" class="form-control" placeholder="Dependencia">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputPassword2">Departamento:</label>
+                    <input type="text" class="form-control" placeholder="Departamento">
+                  </div>
+                </div><br>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="exampleInputPassword1">Cargo:</label>
+                    <input type="number" class="form-control" placeholder="Cargo">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Area de Adscripcion -->
+
+        <!-- Subir credencial -->
+        <div class="form-group">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Anexar Identificación Oficial</h5>
+              <form>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        1.- El documento debe ser en .pdf
+                      </li>
+                      <li class="list-group-item">
+                        2.- Todo el contenido debe verse en una sola hoja.
+                      </li>
+                      <li class="list-group-item">
+                        3.- Solo puede anexar una identificación INE o un pasaporte vigente.
+                      </li>
+                      <li class="list-group-item">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Subir credencial -->
+
         <button type="button" class="btn btn-primary">
-            Registrar
+            <a href="bienvenida.html" style="color: white;">
+              Registrar
+            </a>
         </button>
         <button type="button" class="btn btn-primary">
           <a href="index.html" style="color: white;">

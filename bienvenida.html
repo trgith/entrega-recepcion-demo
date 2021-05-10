@@ -11,85 +11,22 @@
 
 <body>
 <div class="jumbotron text-center">
-  <h1>Elegir Rol</h1>
+  <h1>Bienvenida</h1>
 </div>
   
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Entregas</h5>
-          <p class="card-text">La persona que entrega</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Entrega')">Iniciar como quien Entrega</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Testigo</h5>
-          <p class="card-text">Participación como testigo</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Testigo')">Iniciar como testigo</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Recepciones</h5>
-          <p class="card-text">Servidor público que recibe</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Recibe')">Iniciar como quien Recibe</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Control Interno</h5>
-          <p class="card-text">Orgáno de Control interno</p>
-          <button type="button" class="btn btn-primary" onclick="ElegirRol('Control')">Iniciar como control Interno</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <br>
-  <div class="row">
-    <div class="col text-left">
-      <button type="button" class="btn btn-primary">
+    <h3>
+        Gracias por registrarte, ahora puedes continuar con el proceso.
+    </h3>
+    <br>
+    <button class="btn btn-primary">
         <a href="index.html" style="color: white;">
-          Regresar
+            Continuar
         </a>
     </button>
-    </div>
-  </div>
 </div>
 
-<script>
-  function ElegirRol(rol){
-    switch (rol) {
-    case 'Entrega':
-      window.location.href = 'elegir_testigo.html';
-      break;
-    case 'Testigo':
-      window.location.href = 'testigo.html';
-      break;
-    case 'Recibe':
-      window.location.href = 'recepcion.html';
-      break;
-    case 'Control':
-      window.location.href = 'control.html';
-      break;
-    default:
-      window.location.href = 'index.html';
-      break;
-}
-  }
-</script>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="bg-primary text-white text-center text-lg-start">
     <!-- Grid container -->

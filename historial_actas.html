@@ -11,285 +11,220 @@
 
 <body>
 <div class="jumbotron text-center">
-  <h1>Pantalla de Entrega</h1>
+  <h1>Historial de Actas</h1>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-2 text-left">
-      <button class="btn btn-primary">Unidades Administrativas</button>&nbsp;
+    <!-- Cuerpo de tabla -->
+    <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Dependencia</th>
+              <th scope="col">No. Acta</th>
+              <th scope="col">Fecha Entrega</th>
+              <th scope="col">Observaciones</th>
+              <th scope="col">Descargar Acta</th>
+              <th scope="col">Ver Anexos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Dependencia 1</th>
+              <td>9973</td>
+              <td>10-05-2021</td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalObservaciones">
+                  Ver Observaciones
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning">
+                  Descargar Acta
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalAnexos">
+                  Ver Anexos
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Dependencia 1</th>
+              <td>3256</td>
+              <td>11-05-2020</td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalObservaciones">
+                  Ver Observaciones
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning">
+                  Descargar Acta
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalAnexos">
+                  Ver Anexos
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Dependencia 3</th>
+              <td>3877</td>
+              <td>10-05-2021</td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalObservaciones">
+                  Ver Observaciones
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning">
+                  Descargar Acta
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalAnexos">
+                  Ver Anexos
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Dependencia 4</th>
+              <td>1124</td>
+              <td>10-05-2021</td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalObservaciones">
+                  Ver Observaciones
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning">
+                  Descargar Acta
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#ModalAnexos">
+                  Ver Anexos
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
-    <div class="col-md-10 text-right">
-      <button class="btn btn-primary">Notificaciones</button>&nbsp;
-      <button class="btn btn-warning">Observaciones</button>&nbsp;
-      <button class="btn btn-success">Respuestas</button>&nbsp;
-      <button class="btn btn-primary" data-toggle="modal" data-target="#ActualizarInformacion">Actualizar mis Datos</button>
-      <button class="btn btn-primary">
-        <a href="historial_actas.html" style="color:white;">
-          Historial de Actas
-        </a>
-      </button>
-    </div>
-  </div>
+    <!-- Cuerpo de tabla -->
 </div>
 
-<div class="container">
-  
-  <div class="row">
-    <!-- Columna Izquierda -->
-    <div class="col-md-3">
-      <div style="overflow-y: scroll; height: 25vh;">
-        <div id="accordion">
-          <div class="card">
-            <div class="card" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black;">
-                  Anexo 1
-                </button>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="card-body">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: black;">
-                  Anexo 2
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                gsdgsdg
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: black;">
-                  Anexo 3
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                sdgsd
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: black;">
-                  Anexo 3
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                sdgsd
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: black;">
-                  Anexo 3
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                sdgsd
-              </div>
-            </div>
-          </div>
+<!-- Modal Observaciones -->
+<div class="modal fade" id="ModalObservaciones" tabindex="-1" role="dialog" aria-labelledby="ModalObservaciones" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ver Observaciones</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </div>
-    </div>
-    <!-- Columna Izquierda -->
-    
+        <div class="modal-body">
 
-    <!-- Columna Derecha -->
-    <div class="col-md-9">
-      <span>Anexos</span>
-      <div class="row">
-        <div class="col-md-10">
-          <select class="form-control" id="Anexos">
-            <option value="1">Anexo 1</option>
-            <option value="2">Anexo 2</option>
-            <option value="3">Anexo 3</option>
-            <option value="4">Anexo 4</option>
-            <option value="5">Anexo 5</option>
-            <option value="6">Anexo 6</option>
-            <option value="7">Anexo 7</option>
-            <option value="8">Anexo 8</option>
-            <option value="9">Anexo 9</option>
-            <option value="10">Anexo 10</option>
-            <option value="11">Anexo 11</option>
-            <option value="12">Anexo 12</option>
-            <option value="13">Anexo 13</option>
-            <option value="14">Anexo 14</option>
-            <option value="15">Anexo 15</option>
-            <option value="16">Anexo 16</option>
-            <option value="17">Anexo 17</option>
-            <option value="18">Anexo 18</option>
-            <option value="19">Anexo 19</option>
-            <option value="20">Anexo 20</option>
-            <option value="21">Anexo 21</option>
-            <option value="22">Anexo 22</option>
-            <option value="23">Anexo 23</option>
-            <option value="24">Anexo 24</option>
-            <option value="25">Anexo 25</option>
-            <option value="26">Anexo 26</option>
-            <option value="27">Anexo 27</option>
-            <option value="28">Anexo 28</option>
-            <option value="29">Anexo 29</option>
-            <option value="30">Anexo 30</option>
-            <option value="31">Anexo 31</option>
-            <option value="32">Anexo 32</option>
-            <option value="33">Anexo 33</option>
-            <option value="34">Anexo 34</option>
-            <option value="35">Anexo 35</option>
-          </select>
+            <!-- Cuerpo de Observaciones -->
+            <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Detalle Observación</th>
+                      <th scope="col">Fecha Atendido</th>
+                      <th scope="col">Quien emitió</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Incongruencia de Datos</td>
+                      <td>10-05-2021</td>
+                      <td>Usuario 974</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Incongruencia de Datos</td>
+                        <td>10-05-2021</td>
+                        <td>Usuario 125</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Cuerpo de Observaciones -->
+
         </div>
-        <div class="col-md-2">
-          <button class="btn btn-primary" onclick="AnexoElegido()">Elegir</button>
-        </div>
-      </div>
-      <br>
-      <div class="container" id="ConstruccionAnexo" style="display: none;">
-        <div class="card">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-3 text-left">
-                <button class="btn btn-primary">Leyes Aplicables</button>
-              </div>
-              <div class="col-md-6 text-center">
-                <p id="TituloAnexo"></p>
-              </div>
-              <div class="col-md-3 text-right">
-                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
-              </div>
-            </div>
-      
-            <!-- Contenido 1 -->
-            <br>
-            <div class="card">
-              <div class="card-body">
-        
-                <!-- Tabla 1 -->
-                Plan de Desarrollo Municipal
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Periodo</th>
-                        <th scope="col">Fecha de Presentación en ASEP</th>
-                        <th scope="col">Folio de Recibo de ASEP</th>
-                        <th scope="col">Fecha de Publicación <strong>(Periódico)</strong></th>
-                        <th scope="col">Agregar</th>
-                      </tr>
-                    </thead>
-                    <tbody id="CuerpoTabla1">
-                      <tr>
-                        <td>
-                          <input type="text" class="form-control" id="Periodo1">
-                        </td>
-                        <td>
-                          <input type="date" class="form-control" id="FechaPresentacion">
-                        </td>
-                        <td>
-                          <input type="text" class="form-control" id="Folio">
-                        </td>
-                        <td>
-                          <input type="date" class="form-control" id="FechaPublicacion">
-                        </td>
-                        <td>
-                          <button class="btn btn-danger" onclick="AgregarFila1()">Agregar</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>        
-                <!-- Tabla 1 -->
-        
-              </div>
-            </div>
-            <!-- Contenido 1 -->
-      
-            <!-- Contenido 2 -->
-            <br>
-            <div class="card">
-              <div class="card-body">
-        
-                <!-- Tabla 2 -->
-                Cumplimiento al Plan de Desarrollo Municipal 2018-2021
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Periodo</th>
-                        <th scope="col">Cumple con las especificaciones de la Ley Orgánica Municipal</th>
-                        <th scope="col">Cumple con la Metodología de Marco Lógico</th>
-                        <th scope="col">Agregar</th>
-                      </tr>
-                    </thead>
-                    <tbody id="CuerpoTabla2">
-                      <tr>
-                        <td>
-                          <input type="text" class="form-control" id="Periodo2">
-                        </td>
-                        <td>
-                          <input type="text" class="form-control" id="Cumple1">
-                        </td>
-                        <td>
-                          <input type="text" class="form-control" id="Cumple2">
-                        </td>
-                        <td>
-                          <button class="btn btn-danger" onclick="AgregarFila2()">Agregar</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>        
-                <!-- Tabla 2 -->
-        
-              </div>
-            </div>
-            <!-- Contenido 2 -->
-      
-            <!-- Boton para generar -->
-            <br>
-            <div class="row">
-              <div class="col text-center">
-                <button class="btn btn-success">Generar Formato</button>
-              </div>
-            </div>
-            <!-- Boton para generar -->
-      
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
-    <!-- Columna Izquierda -->
-  
-  </div>
 </div>
+<!-- Modal Observaciones -->
+
+<!-- Modal Anexos -->
+<div class="modal fade" id="ModalAnexos" tabindex="-1" role="dialog" aria-labelledby="ModalAnexos" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Listado Anexos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- Cuerpo de Observaciones -->
+            <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre Anexo</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Descargar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Plan Desarrollo Municipal</th>
+                      <td>10-05-2021</td>
+                      <td>
+                          <button class="btn btn-success">
+                              Descargar
+                          </button>
+                      </td>
+                    </tr>
+                    <tr>
+                        <th>Estructura Orgánica</th>
+                        <td>10-05-2021</td>
+                        <td>
+                            <button class="btn btn-success">
+                                Descargar
+                            </button>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- Cuerpo de Observaciones -->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal Anexos -->
 
 
 <br>
 <div class="container">
   <button class="btn btn-primary" type="button">
-      <a href="elegir_testigo.html" style="color: white;">
+      <a href="entrega.html" style="color: white;">
           Regresar
       </a>
   </button>
