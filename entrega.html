@@ -2942,9 +2942,17 @@
                 <!-- Cuerpo -->
                 <div class="card">
                   <div class="card-header">
-                    Numero de Legajos para el año 2014
+                    Numero de Legajos para el año:
+                    <select class="form-control">
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                      <option>2018</option>
+                    </select>
                   </div>
                   <div class="card-body">
+                    <!-- Enero - Abril -->
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group row">
@@ -2983,6 +2991,87 @@
                         </div>
                       </div>
                     </div>
+                    <!-- Enero - Abril -->
+                    <!-- Mayo - Agosto -->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Mayo</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Junio</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Julio</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Agosto</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mayo - Agosto -->
+                    <!-- Septiembre - Diciembre -->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Septiembre</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Octubre</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Noviembre</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label">Diciembre</label>
+                          <div class="col-sm-12">
+                            <input type="number" class="form-control" placeholder="Ingreso"><br>
+                            <input type="number" class="form-control" placeholder="Egreso">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Septiembre - Diciembre -->
                   </div>
                 </div>
                 <!-- Cuerpo -->
@@ -3004,6 +3093,178 @@
         </div>
       </div>
       <!-- Anexo 5 -->
+
+      <!-- Anexo 6 -->
+      <div class="container" id="ConstruccionAnexo-6" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Entrega de Información en Sistemas
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre Software</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Contraseña</th>
+                            <th scope="col">Agregar</th>
+                          </tr>
+                        </thead>
+                        <tbody id="CuerpoTabla4">
+                          <tr>
+                            <td>
+                              <input type="text" class="form-control" id="Nombre4">
+                            </td>
+                            <td>
+                              <input type="text" class="form-control" id="Usuario4">
+                            </td>
+                            <td>
+                              <input type="text" class="form-control" id="Contrasena4">
+                            </td>
+                            <td>
+                              <button class="btn btn-danger" onclick="AgregarFila4()">Agregar</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>    
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 6 -->
+
+      <!-- Anexo 7 -->
+      <div class="container" id="ConstruccionAnexo-7" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Entrega de Cuentas Públicas del Año:
+                    <select class="form-control">
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                    </select>
+                  </div>
+                  <div class="card-body">
+
+                    <div class="card">
+                      <div class="card-header">
+                        Cuenta Pública
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                <div class="col-sm-6">
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div>
+                                <label class="col-sm-6 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                <div class="col-sm-6">
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                <div class="col-sm-6">
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div>
+                                <label class="col-sm-6 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                <div class="col-sm-6">
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 7 -->
 
     </div>
     <!-- Contenido -->
@@ -3320,6 +3581,19 @@ function AgregarFila3(){
                               "<td>" + Fecha2 + "</td>" +
                               "<td>" + Responsable2 + "</td>" +
                               "<td>" + Area2 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarFila4(){
+  var Nombre4 = $('#Nombre4').val();
+  var Usuario4 = $('#Usuario4').val();
+  var Contrasena4 = $('#Contrasena4').val();
+
+  $('#CuerpoTabla4').append("<tr>" + 
+                              "<td>" + Nombre4 + "</td>" +
+                              "<td>" + Usuario4 + "</td>" +
+                              "<td>" + Contrasena4 + "</td>" +
                               "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
                             "</tr>");
 }
