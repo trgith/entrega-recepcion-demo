@@ -43,7 +43,7 @@
       <span>Anexos</span>
       <!-- Select de Anexos -->
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-8">
           <select class="form-control" id="Anexos">
             <option value="1">Anexo 1</option>
             <option value="2">Anexo 2</option>
@@ -85,8 +85,35 @@
         <div class="col-md-2">
           <button class="btn btn-primary" onclick="AnexoElegido()">Elegir</button>
         </div>
+        <div class="col-md-2">
+          <button class="btn btn-info" onclick="VerDescripcion()">Información</button>
+        </div>
       </div>
       <!-- Select de Anexos -->
+
+      <!-- Modal de Descripcion -->
+      <div class="modal fade" id="descripcionAnexo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Información de Anexo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="descripcionAnexoCuerpo">
+                <!-- Contenido del Modal -->
+                <!-- Contenido del Modal -->
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal de Descripcion -->
 
       <br>
       <!-- Anexo 1 -->
@@ -173,10 +200,36 @@
                           <input type="text" class="form-control" id="Periodo2">
                         </td>
                         <td>
-                          <input type="text" class="form-control" id="Cumple1">
+                          <div class="row">
+                            <div class="col-md-6 text-center">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                Sí
+                              </label>
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                No
+                              </label>
+                            </div>
+                          </div>
                         </td>
                         <td>
-                          <input type="text" class="form-control" id="Cumple2">
+                          <div class="row">
+                            <div class="col-md-6 text-center">
+                              <input class="form-check-input" type="radio" name="modoMamon" id="exampleRadios1" value="option1" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                Sí
+                              </label>
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <input class="form-check-input" type="radio" name="modoMamon" id="exampleRadios1" value="option1" checked>
+                              <label class="form-check-label" for="exampleRadios1">
+                                No
+                              </label>
+                            </div>
+                          </div>
                         </td>
                         <td>
                           <button class="btn btn-danger" onclick="AgregarFila2()">Agregar</button>
@@ -194,8 +247,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -227,7 +283,19 @@
               <div class="card-body">
         
                 <!-- Tabla 1 -->
-                Manuales Administrativos, Leyes o Reglamentos
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    Manuales Administrativos, Leyes o Reglamentos
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Anexar Organigrama</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                  </div>
+                </div>
                 <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -273,8 +341,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -305,22 +376,31 @@
             <div class="card">
               <div class="card-body">
 
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Programa Operativo Anual</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1" multiple>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- Botones de Años -->
                 <p>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Ano1" aria-expanded="false" aria-controls="collapseExample">
-                    2014
+                    2018
                   </button>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Ano2" aria-expanded="false" aria-controls="collapseExample">
-                    2015
+                    2019
                   </button>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Ano3" aria-expanded="false" aria-controls="collapseExample">
-                    2016
+                    2020
                   </button>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Ano4" aria-expanded="false" aria-controls="collapseExample">
-                    2017
+                    2021
                   </button>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Ano5" aria-expanded="false" aria-controls="collapseExample">
-                    2018
+                    2022
                   </button>
                 </p>
                 <!-- Botones de Años -->
@@ -1240,8 +1320,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -1277,31 +1360,31 @@
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Enero
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Febrero" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Febrero
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Marzo" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Marzo
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Abril" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Abril
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Mayo" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Mayo
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Junio" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Junio
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Julio" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Julio
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Agosto" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Agosto
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Septiembre" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Septiembre
                   </button>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Octubre" aria-expanded="false" aria-controls="collapseExample">
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Enero" aria-expanded="false" aria-controls="collapseExample">
                     Octubre
                   </button>
                 </p>
@@ -1319,13 +1402,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios1" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos1" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos"  value="0" id="Magneticos1" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1341,13 +1427,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios2" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos2" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos2" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1363,13 +1452,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios3" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos3" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos3" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1385,13 +1477,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0"id="Folios4" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos4" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos4" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1407,13 +1502,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios5" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos5" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos5" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1429,13 +1527,16 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios6" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos6" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos6" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
@@ -1451,1454 +1552,61 @@
                             <form>
                               <div class="form-row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Folio Recibido">
+                                  <label for="">Folios Recibidos:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="Folios7" onchange="CambiarFoliosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Legajos">
+                                  <label for="">Legajos:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="Legajos7" onchange="CambiarLegajosTotales()">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Medios Magnéticos">
+                                  <label for="">Medios Mágneticos:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="Magneticos7" onchange="CambiarMediosMagneticosTotales()">
                                 </div>
                               </div>
                             </form>
                           </div>
                         </div><br>
                         <!-- Septima Card -->
+                        <!-- Card de Totales -->
+                        <div class="card">
+                          <div class="card-header">
+                            Cantidades Totales por año
+                          </div>
+                          <div class="card-body">
+                            <form>
+                              <div class="form-row">
+                                <div class="col">
+                                  <label for="">Folios Recibidos Totales:</label>
+                                  <input type="number" class="form-control" placeholder="Folio Recibido" value="0" id="TotalFolios" readonly>
+                                </div>
+                                <div class="col">
+                                  <label for="">Legajos Totales:</label>
+                                  <input type="number" class="form-control" placeholder="Legajos" value="0" id="TotalLegajos" readonly>
+                                </div>
+                                <div class="col">
+                                  <label for="">Medios Mágneticos Totales:</label>
+                                  <input type="number" class="form-control" placeholder="Medios Magnéticos" value="0" id="MagneticosTotales" readonly>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div><br>
+                        <!-- Card de Totales -->
                     </div>
                     <!-- Enero -->
 
-                    <!-- Febrero -->
-                    <div class="collapse" id="Febrero">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Febrero -->
-
-                    <!-- Marzo -->
-                    <div class="collapse" id="Marzo">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Marzo -->
-
-                    <!-- Abril -->
-                    <div class="collapse" id="Abril">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Abril -->
-
-                    <!-- Mayo -->
-                    <div class="collapse" id="Mayo">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Mayo -->
-
-                    <!-- Junio -->
-                    <div class="collapse" id="Junio">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Junio -->
-
-                    <!-- Julio -->
-                    <div class="collapse" id="Julio">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Julio -->
-
-                    <!-- Agosto -->
-                    <div class="collapse" id="Agosto">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Agosto -->
-
-                    <!-- Septiembre -->
-                    <div class="collapse" id="Septiembre">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Septiembre -->
-
-                    <!-- Octubre -->
-                    <div class="collapse" id="Octubre">
-                      <!-- Primera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Programa Presupuestario
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Primera Card -->
-                      <!-- Segunda Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Estados Financieros
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Segunda Card -->
-                      <!-- Tercera Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Impuesto Predial y Derechos de Suministros del Agua
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Tercera Card -->
-                      <!-- Cuarta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Cédula de Ajustes
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Cuarta Card -->
-                      <!-- Quinta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Copia Certificada de la Contratación del Auditor Externo
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Quinta Card -->
-                      <!-- Sexta Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Formatos Trimestrales de la Ley  de Disciplina Financiera
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Sexta Card -->
-                      <!-- Septima Card -->
-                      <div class="card">
-                        <div class="card-header">
-                          Reportes de Obras y Acciones
-                        </div>
-                        <div class="card-body">
-                          <form>
-                            <div class="form-row">
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Folio Recibido">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Legajos">
-                              </div>
-                              <div class="col">
-                                <input type="text" class="form-control" placeholder="Medios Magnéticos">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div><br>
-                      <!-- Septima Card -->
-                    </div>
-                    <!-- Octubre -->
+                    
                 <br>
                 <!-- Cards de Años -->
+
+                <!-- Cuadro de Observaciones -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea class="form-control" id="validationTextarea" placeholder="Observaciones"></textarea>
+                  </div>
+                </div>
+                <!-- Cuadro de Observaciones -->
         
               </div>
             </div>
@@ -2907,8 +1615,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -2942,14 +1653,33 @@
                 <!-- Cuerpo -->
                 <div class="card">
                   <div class="card-header">
-                    Numero de Legajos para el año:
-                    <select class="form-control">
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
-                      <option>2018</option>
-                    </select>
+                    <div class="row">
+                      <div class="col-md-12">
+                        Area
+                        <select class="form-control">
+                          <option>Documentación Justificativa y Comprobatoria de la Fuente de Financiamiento de Ingresos de Gestión</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Participaciones)</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Aportaciones) - Fortalecimiento de Municipios</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Aportaciones) - Infraestructura Social Municipal</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Convenios) - Desastres Naturales</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Convenios) - Fondo Concursable</option>
+                          <option>Documentación Justificativa y Comprobatoria de los recursos Federales(Convenios) - Otros Fondos </option>
+                        </select>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-12">
+                        Numero de Legajos para el año:
+                        <select class="form-control">
+                          <option>2014</option>
+                          <option>2015</option>
+                          <option>2016</option>
+                          <option>2017</option>
+                          <option>2018</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                   <div class="card-body">
                     <!-- Enero - Abril -->
@@ -3083,8 +1813,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -3149,6 +1882,57 @@
                         </tbody>
                       </table>
                     </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <ul class="list-group">
+                          <li class="list-group-item">Se entregan en este momento:</li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> DOCUMENTACIÓN COMPROBATORIA QUE AMPARA LA ADQUISICIÓN DEL SOFTWARE DEL SISTEMA DE CONTABILIDAD GUBERNAMENTAL
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> BALANZAS DE COMPROBACIÓN DE ENERO A OCTUBRE DE 2018 (IMPRESOS DEL SISTEMA DE CONTABILIDAD GUBERNAMENTAL), CON FECHA DE IMPRESIÓN 14 DE OCTUBRE DE 2018.
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADOS FINANCIEROS AL MES DE OCTUBRE DE 2018 (IMPRESOS DEL SISTEMA DE CONTABILIDAD GUBERNAMENTAL), CON FECHA DE IMPRESIÓN 14 DE OCTUBRE DE 2018.
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO DE SITUACIÓN FINANCIERA
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO DE ACTIVIDADES
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO DE FLUJO DE EFECTIVO
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO DE VARIACIÓN EN LA HACIENDA PÚBLICA
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO ANALÍTICO DEL ACTIVO
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO DE CAMBIOS EN LA SITUACIÓN FINANCIERA
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO ANALÍTICO DE INGRESOS
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> ESTADO ANALÍTICO DEL EJERCICIO DEL PRESUPUESTO DE EGRESOS
+                          </li>
+                          <li class="list-group-item">
+                            <input type="checkbox" aria-label="Checkbox for following text input"> EQUIPO DE CÓMPUTO DONDE SE ENCUENTRE EL SOFTWARE DEL SISTEMA DE CONTABILIDAD GUBERNAMENTAL
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <textarea class="form-control" aria-label="With textarea">Observaciones</textarea>
+                      </div>
+                    </div>
                   </div>
                 </div>    
                 <!-- Cuerpo -->
@@ -3160,8 +1944,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -3197,14 +1984,15 @@
                   <div class="card-header">
                     Entrega de Cuentas Públicas del Año:
                     <select class="form-control">
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
+                      <option>2018</option>
+                      <option>2019</option>
+                      <option>2020</option>
+                      <option>2021</option>
                     </select>
                   </div>
                   <div class="card-body">
 
+                    <!-- Card de Cuena Pública -->
                     <div class="card">
                       <div class="card-header">
                         Cuenta Pública
@@ -3214,12 +2002,12 @@
                           <div class="row">
                             <div class="col-md-12">
                               <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
                                 <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
                                   <input type="date" class="form-control" placeholder="Fecha Presentación">
-                                </div>
-                                <label class="col-sm-6 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                </div><br>
                                 <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
                                   <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
                                 </div>
                               </div>
@@ -3230,20 +2018,320 @@
                           <div class="row">
                             <div class="col-md-12">
                               <div class="form-group row">
-                                <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
                                 <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
                                   <input type="date" class="form-control" placeholder="Fecha Presentación">
-                                </div>
-                                <label class="col-sm-6 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                </div><br>
                                 <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
                                   <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-12 col-form-label">Total de Discos Compactos o Medios Mágneticos</label>
+                                  <input type="number" class="form-control" value="0">
+                                </div><br>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
                       </div>
-                    </div>
+                    </div><br>
+                    <!-- Card de Cuena Pública -->
+                    <!-- Card de Número Medios Mágneticos -->
+                    <div class="card">
+                      <div class="card-header">
+                        Número Medios Mágneticos
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-12 col-form-label">Total de Discos Compactos o Medios Mágneticos</label>
+                                  <input type="number" class="form-control" value="0">
+                                </div><br>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Número Medios Mágneticos -->
+                    <!-- Card de Legajos -->
+                    <div class="card">
+                      <div class="card-header">
+                        Legajos
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Fecha de Presentación</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-12 col-form-label">Fecha de Presentación del Periódico Oficial</label>
+                                  <input type="date" class="form-control" placeholder="Fecha Presentación Publicada en Periódico Oficial">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-12 col-form-label">Total de Discos Compactos o Medios Mágneticos</label>
+                                  <input type="number" class="form-control" value="0">
+                                </div><br>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Legajos -->
+
+                    <!-- Card de Libro Diario -->
+                    <div class="card">
+                      <div class="card-header">
+                        Libro Diario
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2014</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2015</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2016</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2017</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-6 col-form-label">Total:</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Libro Diario -->
+                    <!-- Card de Libro Mayor -->
+                    <div class="card">
+                      <div class="card-header">
+                        Libro Mayor
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2014</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2015</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2016</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2017</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-6 col-form-label">Total:</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Libro Mayor -->
+                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+                    <div class="card">
+                      <div class="card-header">
+                        Libro Inventarios, Almacén y Balances
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2014</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2015</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2016</label>
+                                  <input type="number" class="form-control">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Número 2017</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros Input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-6 col-form-label">Total:</label>
+                                  <input type="number" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+                    <div class="card">
+                      <div class="card-header">
+                        Comentarios
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <textarea name="comentario" id="dd" class="form-control" rows="10">...</textarea>
+                                </div><br>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+
                   </div>
                 </div>
                 <!-- Cuerpo -->
@@ -3255,8 +2343,11 @@
             <!-- Boton para generar -->
             <br>
             <div class="row">
-              <div class="col text-center">
+              <div class="col-md-6 text-center">
                 <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
               </div>
             </div>
             <!-- Boton para generar -->
@@ -3265,6 +2356,1075 @@
         </div>
       </div>
       <!-- Anexo 7 -->
+
+      <!-- Anexo 8 -->
+      <div class="container" id="ConstruccionAnexo-8" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Entrega de Informes Parciales y Dictámen del Auditor Externo del Año:
+                    <select class="form-control">
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                      <option>2018</option>
+                    </select>
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Card de Primero -->
+                    <div class="card">
+                      <div class="card-header">
+                        Informes y Dictámen
+                      </div>
+                      <div class="card-body">
+                          <!-- Primeros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Primero</label>
+                                  <input type="text" class="form-control" placeholder="Folio del Recibo">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Segundo</label>
+                                  <input type="text" class="form-control" placeholder="Folio del Recibo">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Primeros Input -->
+                          <!-- Segundos input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Tercero</label>
+                                  <input type="text" class="form-control" placeholder="Folio del Recibo">
+                                </div><br>
+                                <div class="col-sm-6">
+                                  <label class="col-sm-6 col-form-label">Final con Dictámen</label>
+                                  <input type="text" class="form-control" placeholder="Folio del Recibo">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Segundos Input -->
+                          <!-- Terceros input -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group row">
+                                <div class="col-sm-12">
+                                  <label class="col-sm-12 col-form-label">Total Entregado</label>
+                                  <input type="text" class="form-control" placeholder="Folio del Recibo">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Terceros Input -->
+                      </div>
+                    </div><br>
+                    <!-- Card de Primero -->
+
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 8 -->
+
+      <!-- Anexo 9 -->
+      <div class="container" id="ConstruccionAnexo-9" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Expediente Tributario del Año:
+                    <select class="form-control">
+                      <option>2014</option>
+                      <option>2015</option>
+                      <option>2016</option>
+                      <option>2017</option>
+                      <option>2018</option>
+                    </select>
+                  </div>
+                  <div class="card-body">
+                    <!-- Cambios de Situacion Fiscal -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Cambios de situación Fiscal del Registro Federal de Contribuyentes</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div><br>
+                    <!-- Cambios de Situacion Fiscal -->
+                    <!-- Inscripción -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Inscripción</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div><br>
+                    <!-- Inscripción -->
+                    <!-- Cambio de Domicilio -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Cambio de Domicilio</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div><br>
+                    <!-- Cambio de Domicilio -->
+                    <!-- Avisos -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Avisos</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Avisos -->
+                    <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS)</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
+                    <!-- Declaraciones mensuales -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Declaraciones mensuales: Entero, Retenciones y Operaciones con Terceros</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Declaraciones mensuales --> 
+                    <!-- Declaraciones de Impuesto -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Declaraciones de Impuesto sobre Erogaciones por remuneraciones al Trabajo Personal</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Declaraciones de Impuesto -->
+                    <!-- Declaraciones Anuales Informativas -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Declaraciones Anuales Informativas</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Declaraciones Anuales Informativas -->
+                    <!-- Sueldos y Salarios -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Sueldos y Salarios</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Sueldos y Salarios -->
+                    <!-- Clientes y Proveedores -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Clientes y Proveedores</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Clientes y Proveedores -->
+                    <!-- Retenciones ISR -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Retenciones ISR</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Retenciones ISR -->
+                    <!-- Otros(especifíque) -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-12 col-form-label text-center">Otros(especifíque)</label>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Fecha:</label>
+                            <input type="date" class="form-control" placeholder="Fecha">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="col-sm-12 col-form-label">Folio:</label>
+                            <input type="text" class="form-control" placeholder="Folio">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Avisos -->
+                  </div>
+                </div>
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 9 -->
+
+      <!-- Anexo 10 -->
+      <div class="container" id="ConstruccionAnexo-10" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+
+                <!-- Card de Datos Generales -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Información General
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(1)" id="EsconderCuerpoAnexo-1" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(1)" id="MostrarCuerpoAnexo-1">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-1">
+                    <form>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Código del Listado de Cuentas <strong>(Hasta 50º Nivel)</strong>:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Fuente de Financiamiento:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Fecha:</label>
+                          <input type="date" class="form-control">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Unidad Administrativa:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- Card de Datos Generales -->
+                <br>
+        
+                <!-- Card Arqueo de Caja en Efectivo -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Arqueo de Caja en Efectivo
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(2)" id="EsconderCuerpoAnexo-2" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(2)" id="MostrarCuerpoAnexo-2">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-2">
+                    <!-- Card de Billetes -->
+                    <div class="card">
+                      <div class="card-header">
+                        Billetes
+                      </div>
+                      <div class="card-body">
+                        
+                        <!-- Cuerpo del card de Billetes -->
+                        <form> 
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$1,000.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$500.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$200.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$100.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$50.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$20.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <label class="text-center" for="inputEmail4">Total:</label>
+                              <input type="text" class="form-control" placeholder="$00.00" readonly>
+                            </div>
+                          </div>
+                        </form>
+                        <!-- Cuerpo del card de Billetes -->
+
+                      </div>
+                    </div>
+                    <!-- Card de Billetes -->
+                    <br>
+                    <!-- Card de Monedas -->
+                    <div class="card">
+                      <div class="card-header">
+                        Monedas
+                      </div>
+                      <div class="card-body">
+                        
+                        <!-- Cuerpo del card de Monedas -->
+                        <form> 
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$10.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$5.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$2.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$1.00" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$00.50" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$00.20" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-4">
+                              <label class="text-center" for="inputEmail4">Denominación:</label>
+                              <input type="text" class="form-control" placeholder="$00.10" readonly>
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Cantidad:</label>
+                              <input type="number" class="form-control" placeholder="0">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputEmail4">Subtotal:</label>
+                              <input type="text" class="form-control" placeholder="$0.00" readonly>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <label class="text-center" for="inputEmail4">Total:</label>
+                              <input type="text" class="form-control" placeholder="$00.00" readonly>
+                            </div>
+                          </div>
+                        </form>
+                        <!-- Cuerpo del card de Monedas -->
+
+                      </div>
+                    </div>
+                    <!-- Card de Monedas -->
+                  </div>
+                </div>   
+                <!-- Card Arqueo de Caja en Efectivo -->
+                <br>
+
+                <!-- Card de Arqueo de Caja en Cheques -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Arqueo de Caja en Cheque
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(3)" id="EsconderCuerpoAnexo-3" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(3)" id="MostrarCuerpoAnexo-3">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-3">
+
+                    <!-- Datos generales de Arqueo de Caja en Cheque -->
+                    <form>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <label>Total de Efectivo en Caja:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label>Fecha en que inicio el corte de caja:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Importe con el que inició el corte de caja:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label>Fecha en que terminó el corte de caja:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Importe con el que terminó el corte de caja:</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+                    <!-- Datos generales de Arqueo de Caja en Cheque -->
+
+                    <!-- Tabla de las Entradas -->
+                    <form>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Fecha:</label>
+                          <input type="date" class="form-control" placeholder="Fecha" id="Fecha5">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Folio CFDI:</label>
+                          <input type="text" class="form-control" placeholder="Folio CFDI" id="FolioCFDI5">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label for="inputEmail4">RFC a quien se emitió:</label>
+                          <input type="text" class="form-control" placeholder="RFC a quien se emitió" id="RFC5">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Código CRI:</label>
+                          <input type="text" class="form-control" placeholder="Código CRI" id="CRI5">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Expedido a favor de:</label>
+                          <input type="text" class="form-control" placeholder="Expedido a favor de" id="Expedido5">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Comprobante de Pago:</label>
+                          <input type="text" class="form-control" placeholder="Comprobante de Pago" id="Comprobante5">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Concepto:</label>
+                          <input type="text" class="form-control" placeholder="Concepto" id="Concepto5">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Importe:</label>
+                          <input type="text" class="form-control" placeholder="Importe" id="Importe5">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <label for="inputEmail4">Tipo:</label>
+                          <select name="" id="Tipo5" class="form-control">
+                            <option value="Entrada">Entrada</option>
+                            <option value="Salida">Salida</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <button type="button" class="btn btn-danger" onclick="AgregarFila5()">Agregar</button>
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">CFDI</th>
+                          <th scope="col">Comprobante</th>
+                          <th scope="col">Concepto</th>
+                          <th scope="col">Importe</th>
+                          <th scope="col">Tipo</th>
+                          <th scope="col">Acción</th>
+                        </thead>
+                        <tbody id="CuerpoTabla5">
+                        </tbody>
+                        <tfoot>
+                          <td colspan="12" class="text-right">
+                            Total: $0.00
+                          </td>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <!-- Tabla de las Entradas -->
+
+                  </div>
+                </div>
+                <!-- Card de Arqueo de Caja en Cheques -->
+                <br>
+
+                <!-- Card de Relación de Comprobantes Digitales por Internet como Comprobante de Pago -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Relación de Comprobantes Digitales por Internet como Comprobante de Pago
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(4)" id="EsconderCuerpoAnexo-4" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(4)" id="MostrarCuerpoAnexo-4">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-4">
+                    <form>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Fecha:</label>
+                          <input type="date" class="form-control" id="Fecha6">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Documento:</label>
+                          <input type="text" class="form-control" id="Documento6">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Folio CFDI:</label>
+                          <input type="text" class="form-control" id="FolioCFDI6">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Fecha CFDI:</label>
+                          <input type="date" class="form-control" id="FechaCFDI6">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Código del C.O.G.:</label>
+                          <input type="text" class="form-control" id="COG6">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Tipo de Gasto:</label>
+                          <input type="text" class="form-control" id="Gasto6">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Lista de Cuentas <strong>(Hasta 50º Nivel)</strong>:</label>
+                          <input type="text" class="form-control" id="Cuentas6">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Expedido por:</label>
+                          <input type="text" class="form-control" id="Expedido6">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col">
+                          <label for="inputEmail4">Concepto:</label>
+                          <input type="text" class="form-control" id="Concepto6">
+                        </div>
+                        <div class="col">
+                          <label for="inputEmail4">Importe:</label>
+                          <input type="text" class="form-control" id="Importe6">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" type="button" onclick="AgregarFila6()">Agregar</button>
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+
+                    
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Folio CFDI</th>
+                          <th scope="col">C.O.G.</th>
+                          <th scope="col">Gasto</th>
+                          <th scope="col">Concepto</th>
+                          <th scope="col">Importe</th>
+                          <th scope="col">Acción</th>
+                        </thead>
+                        <tbody id="CuerpoTabla6">
+                        </tbody>
+                        <tfoot>
+                          <td colspan="12" class="text-right">
+                            Total: $0.00
+                          </td>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card de Relación de Comprobantes Digitales por Internet como Comprobante de Pago -->
+                <br>
+
+                <!-- Card de Relación de Cheques de Caja -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Relación de Cheques en Caja
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(5)" id="EsconderCuerpoAnexo-5" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(5)" id="MostrarCuerpoAnexo-5">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-5">
+
+                    <!-- Cuerpo del card de Relacion de Cheques en Caja -->
+                    <form> 
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label class="text-center" for="inputEmail4">Fecha:</label>
+                          <input type="date" class="form-control" id="Fecha7">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Número de Cheque:</label>
+                          <input type="text" class="form-control" id="Cheque7">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <label class="text-center" for="inputEmail4">Expedido por o favor de:</label>
+                          <input type="text" class="form-control" id="Expedido7">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4">Importe:</label>
+                          <input type="text" class="form-control" id="Importe7">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" type="button" onclick="AgregarFila7()">Agregar</button>
+                        </div>
+                      </div>
+                    </form>
+                    <br>
+
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Número de Cheque</th>
+                          <th scope="col">Expedido Por / a Favor de:</th>
+                          <th scope="col">Importe</th>
+                          <th scope="col">Acción</th>
+                        </thead>
+                        <tbody id="CuerpoTabla7">
+                        </tbody>
+                        <tfoot>
+                          <td colspan="12" class="text-right">
+                            Total: $0.00
+                          </td>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <!-- Cuerpo del card de Relacion de Cheques en Caja -->
+                    <br>
+
+                  </div>
+                </div> 
+                <!-- Card de Relación de Cheques de Caja -->
+                <br>
+
+                <!-- Card para Observaciones -->
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col">
+                        Observaciones
+                      </div>
+                      <div class="col text-right">
+                        <button class="btn btn-danger" onclick="EsconderCuerpoAnexo10(6)" id="EsconderCuerpoAnexo-6" style="display: none;">Minimizar</button>
+                        <button class="btn btn-danger" onclick="MostrarCuerpoAnexo10(6)" id="MostrarCuerpoAnexo-6">Expandir</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body" id="CuerpoCardAnexo10-6">
+
+                    <!-- Cuerpo del card de Relacion de Cheques en Caja -->
+                    <form> 
+                      <div class="form-row">
+                        <div class="col-md-12">
+                          <label class="text-center" for="inputEmail4">Observaciones:</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                      </div>
+                      <br>
+                    </form>
+                    <br>
+                    <!-- Cuerpo del card de Relacion de Cheques en Caja -->
+                    <br>
+
+                  </div>
+                </div> 
+                <!-- Card para Observaciones -->
+        
+              </div>
+            </div>
+            <!-- Contenido -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 10 -->
 
     </div>
     <!-- Contenido -->
@@ -3531,6 +3691,14 @@
 <!-- Modal Actualizar informacion -->
 
 <script>
+/* Esto es para esconder los cuerpos del Anexo 10 */
+$('#CuerpoCardAnexo10-1').hide();
+$('#CuerpoCardAnexo10-2').hide();
+$('#CuerpoCardAnexo10-3').hide();
+$('#CuerpoCardAnexo10-4').hide();
+$('#CuerpoCardAnexo10-5').hide();
+$('#CuerpoCardAnexo10-6').hide();
+
 function AnexoElegido(){
   var e = document.getElementById("Anexos");
   var strUser = e.value;
@@ -3538,6 +3706,51 @@ function AnexoElegido(){
     $('#ConstruccionAnexo-' + i).hide();
   }
   $('#ConstruccionAnexo-' + strUser).show();
+}
+
+function VerDescripcion(){
+  var e = document.getElementById("Anexos");
+  var numAnexo = e.value;
+  switch (numAnexo) {
+    case '1':
+      $('#descripcionAnexoCuerpo').html('Se describe el documento normativo que alinea todas las acciones del Gobierno Municipal, este es el Plan Municipal de Desarrollo. Si cuenta con actualizaciones deberán ser enlistadas de la más reciente a las derogadas.');
+      break;
+    case '2':
+      $('#descripcionAnexoCuerpo').html('Se deberá incorporar el organigrama de manera visual conforme a su publicación en el Periodo Oficial del Estado, así como los Manuales de Organización y Procedimientos, Reglamentos Interior y demás leyes aplicables, algunos ejemplos son: Programas Operativos Anuales, Plan de Desarrollo Urbano, Atlas de Riesgo, Manuales operativos entre otros. Estos últimos son enlistados con su fecha de publicación en el Periodo Oficial del Estado o en su defecto por la instancia competente para su aprobación y publicación.');
+      break;
+    case '3':
+      $('#descripcionAnexoCuerpo').html('Se enlistan la Ley de Ingresos, Presupuesto de Egresos, Informes de Gobierno, Recomendaciones y Plan Anual de Evaluación. Estos cuatro documentos normativos administrativos son de carácter obligatorio anualmente para todos los municipios y deberán ser aprobados por Cabildo o su instancia competente para el caso; por ello deberán ser enlistados por cada año como se muestra.');
+      break;
+    case '3.1':
+      $('#descripcionAnexoCuerpo').html('El Programa Operativo Anual aunque es de cada dependencia se integra el PbR para toda la Administración por lo que deberá ser anexado el mismo.');
+      break;
+    case '4':
+      $('#descripcionAnexoCuerpo').html('La documentación que se presenta a la Auditoría Superior del Estado de Puebla es información programática-presupuestal, es decir, los programas presupuestarios, la cuenta pública, La documentación relativa al estado que guarda la cuenta pública del Municipio, la que incluirá los oficios de razonabilidad, las observaciones, requerimientos o apercibimientos emitidos por el Órgano de Fiscalización Superior o por el Congreso del Estado.');
+      break;
+    case '5':
+      $('#descripcionAnexoCuerpo').html('El Anexos se compone de 5 fuentes de financiamiento: Ingresos de gestión que son los recursos propios del municipio por recaudación. Participaciones: Las Participaciones a Entidades Federativas o Ramo 28 son los recursos asignados a los estados y los municipios en los términos establecidos por la LCF y los Convenios de Adhesión al Sistema de Coordinación Fiscal y de Colaboración Administrativa en Materia Fiscal Federal como Participaciones del Fondo de Operación, Participaciones del Fondo de Inversión, Aportaciones: Las Aportaciones Federales para Entidades Federativas y Municipios o Ramo 33 es el mecanismo presupuestario diseñado para transferir a los estados y municipios recursos que les permitan fortalecer su capacidad de respuesta y atender demandas de gobierno, como el Fondo de Infraestructura Social, Fondo de Fortalecimiento Municipal Convenios que generalmente es el Fondo de Desastres Naturales (FONDEN) como recurso federal o los Fondos Concursables como el Fondo Metropolitano Otros Fondos se deberá anotar el tipo de fondo y el nombre del fondo proveniente de recurso estatal o federal.');
+      break;
+    case '6':
+      $('#descripcionAnexoCuerpo').html('Se agrega la información de usuarios y contraseñas del gobierno municipal para software (si han sido adquiridos), ingresos a plataformas nacionales o estatales (Por ejemplo: Atlas de Riesgo, Sistemas Presupuestarios), el sistema de contabilidad gubernamental; así como de señalar los equipos de cómputo donde se encuentran instalados. También se entregan usuarios y contraseñas de plataformas web, redes sociales o cualquier aplicativo que pertenezca al gobierno municipal.');
+      break;
+    case '7':
+      $('#descripcionAnexoCuerpo').html('La cuenta pública es el reflejo de la gestión financiera del ayuntamiento, bajo la conducción del Presidente Municipal y representa la actividad relacionada directamente con el ejercicio presupuestal; captación de ingresos; programación y aprobación de egresos, contratación y cumplimiento de obligaciones de la deuda pública; administración, ministración, manejo, custodia y aplicación de los recursos financieros y bienes públicos; ejecución de obra pública; así como diversas aplicaciones y rendimiento de los bienes del patrimonio municipal y, en general, de los recursos públicos que emplea el ayuntamiento para la ejecución de los objetivos contenidos en los planes y programas aprobados, de conformidad con las leyes y demás disposiciones en la materia, en un periodo determinado.');
+      break;
+    case '8':
+      $('#descripcionAnexoCuerpo').html('La cuenta pública es el reflejo de la gestión financiera del ayuntamiento, bajo la conducción del Presidente Municipal y representa la actividad relacionada directamente con el ejercicio presupuestal; captación de ingresos; programación y aprobación de egresos, contratación y cumplimiento de obligaciones de la deuda pública; administración, ministración, manejo, custodia y aplicación de los recursos financieros y bienes públicos; ejecución de obra pública; así como diversas aplicaciones y rendimiento de los bienes del patrimonio municipal y, en general, de los recursos públicos que emplea el ayuntamiento para la ejecución de los objetivos contenidos en los planes y programas aprobados, de conformidad con las leyes y demás disposiciones en la materia, en un periodo determinado.');
+      break;
+    case '9':
+      $('#descripcionAnexoCuerpo').html('El expediente tributario es la presentación ante hacienda y SAT del RFC del gobierno municipal, sus declaraciones anuales, mensuales y de impuestos; y la presentación de información por año, como se indica en el anexo. Así mismo se deberá entregar la información en físico de la contraseña, la constancia de situación fiscal, la FIEL y demás información referente a la cuenta del gobierno.');
+      break;
+    case '10':
+      $('#descripcionAnexoCuerpo').html('El anexo se compone de dos hojas, el arqueo de caja y el fondo revolvente. El arqueo de caja es el análisis de las transacciones del efectivo, en un momento determinado, con el objeto de comprobar si se ha contabilizado todo el efectivo recibido y si el saldo que arroja esta cuenta corresponde con lo que se encuentra físicamente en caja en dinero efectivo, cheques o vales. El Fondo Revolvente son los recursos económicos asignados a los titulares de las Dependencias para sufragar gastos directamente.');
+      break;
+    default:
+    alert('default' + numAnexo);
+      break;
+  }
+
+  $('#descripcionAnexo').modal('show');
 }
 
 function AgregarFila1(){
@@ -3596,6 +3809,102 @@ function AgregarFila4(){
                               "<td>" + Contrasena4 + "</td>" +
                               "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
                             "</tr>");
+}
+
+function CambiarFoliosTotales(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 7; i++){
+    sumaTotal += parseInt($('#Folios' + i).val(), 10);
+  }
+  $('#TotalFolios').val(sumaTotal);
+}  
+
+function CambiarLegajosTotales(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 7; i++){
+    sumaTotal += parseInt($('#Legajos' + i).val(), 10);
+  }
+  $('#TotalLegajos').val(sumaTotal);
+}
+
+function CambiarMediosMagneticosTotales(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 7; i++){
+    sumaTotal += parseInt($('#Magneticos' + i).val(), 10);
+  }
+  $('#MagneticosTotales').val(sumaTotal);
+}
+
+function AgregarFila5(){
+  var Fecha5 = $('#Fecha5').val();
+  var FolioCFDI5 = $('#FolioCFDI5').val();
+  var RFC5 = $('#RFC5').val();
+  var CRI5 = $('#CRI5').val();
+  var Expedido5 = $('#Expedido5').val();
+  var Comprobante5 = $('#Comprobante5').val();
+  var Concepto5 = $('#Concepto5').val();
+  var Importe5 = $('#Importe5').val();
+  var Tipo5 = $('#Tipo5').val();
+
+  $('#CuerpoTabla5').append("<tr>" + 
+                              "<td>" + Fecha5 + "</td>" +
+                              "<td>" + FolioCFDI5 + "</td>" +
+                              "<td>" + Comprobante5 + "</td>" +
+                              "<td>" + Concepto5 + "</td>" +
+                              "<td>" + Importe5 + "</td>" +
+                              "<td>" + Tipo5 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarFila6(){
+  var Fecha6 = $('#Fecha6').val();
+  var Documento6 = $('#Documento6').val();
+  var FolioCFDI6 = $('#FolioCFDI6').val();
+  var FechaCFDI6 = $('#FechaCFDI6').val();
+  var COG6 = $('#COG6').val();
+  var Gasto6 = $('#Gasto6').val();
+  var Cuentas6 = $('#Cuentas6').val();
+  var Expedido6 = $('#Expedido6').val();
+  var Concepto6 = $('#Concepto6').val();
+  var Importe6 = $('#Importe6').val();
+
+  $('#CuerpoTabla6').append("<tr>" + 
+                              "<td>" + Fecha6 + "</td>" +
+                              "<td>" + FolioCFDI6 + "</td>" +
+                              "<td>" + COG6 + "</td>" +
+                              "<td>" + Gasto6 + "</td>" +
+                              "<td>" + Concepto6 + "</td>" +
+                              "<td>" + Importe6 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarFila7(){
+  var Fecha7 = $('#Fecha7').val();
+  var Cheque7 = $('#Cheque7').val();
+  var Expedido7 = $('#Expedido7').val();
+  var Importe7 = $('#Importe7').val();
+
+  $('#CuerpoTabla7').append("<tr>" + 
+                              "<td>" + Fecha7 + "</td>" +
+                              "<td>" + Cheque7 + "</td>" +
+                              "<td>" + Expedido7 + "</td>" +
+                              "<td>" + Importe7 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function EsconderCuerpoAnexo10(idCuerpo){
+  $('#CuerpoCardAnexo10-' + idCuerpo).hide();
+  $('#MostrarCuerpoAnexo-' + idCuerpo).css("display", "inline-block");
+  $('#EsconderCuerpoAnexo-' + idCuerpo).css("display", "none");
+}
+
+function MostrarCuerpoAnexo10(idCuerpo){
+  $('#CuerpoCardAnexo10-' + idCuerpo).show();
+  $('#MostrarCuerpoAnexo-' + idCuerpo).css("display", "none");
+  $('#EsconderCuerpoAnexo-' + idCuerpo).css("display", "inline-block");
 }
 
 function QuitarFila(row){

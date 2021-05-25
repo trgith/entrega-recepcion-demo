@@ -28,6 +28,9 @@
         <button type="button" class="btn btn-primary" onclick="Ingresar()">
             Ingresar
         </button>
+        <button type="button" class="btn btn-primary" onclick="ConsumoJSON()">
+          Test
+      </button>
       </form>
 </div>
 
@@ -40,6 +43,24 @@
         } else {
             window.location.href = 'elegir_rol.html';
         }
+    }
+
+    function ConsumoJSON(){
+      //Tabla 1
+      //Cabezero
+      var header = ["Periodo", "Fecha de Presentación en ASEP", "Folio del Recibo ASEP", "Fecha de Publicación (Periódico Oficial)"];
+      //Contenido
+      var preContent1 = {Periodo: "Periodo 1", FechaASEP: "24 Mayo 2021", FolioASEP: "ASEP-09238023", FechaPublicacion: "24 Mayo 2021"};
+      var preContent2 = {Periodo: "Periodo 2", FechaASEP: "25 Mayo 2021", FolioASEP: "ASEP-23394340", FechaPublicacion: "25 Mayo 2021"};
+      var content = [preContent1, preContent2];
+
+      //Tabla 2
+      //Cabezero
+      var header2 = ["Periodo", "Cumple con las Especificaciones de la Ley Orgánica Municipal", "Cumple con la Metodología de Marco Lógico"];
+      //Contenido
+      var preContent3 = {Periodo: "Periodo 3", CumpleEspecificaciones: "26 Mayo 2021", CumpleMetodologia: "ASEP-213123123123"};
+      var preContent4 = {Periodo: "Periodo 4", CumpleEspecificaciones: "27 Mayo 2021", CumpleMetodologia: "ASEP-123123123123"};
+      var content2 = [preContent3, preContent4];
     }
 </script>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -15,7 +15,7 @@
 </div>
   
 <div class="container">
-    <form>
+    <form id="Registro">
         <!-- Datos Personales -->
         <div class="form-group">
           <div class="card">
@@ -25,11 +25,11 @@
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Nombre Completo:</label>
-                    <input type="text" class="form-control" placeholder="Nombre Completo">
+                    <input type="text" class="form-control" placeholder="Nombre Completo" required>
                   </div>
                   <div class="col">
                     <label for="exampleInputPassword2">Num. de Control:</label>
-                    <input type="text" class="form-control" placeholder="Numero de Control">
+                    <input type="text" class="form-control" placeholder="Numero de Control" required>
                   </div>
                 </div><br>
                 <div class="form-row">
@@ -45,7 +45,7 @@
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Teléfono:</label>
-                    <input type="number" class="form-control" placeholder="Teléfono">
+                    <input type="number" class="form-control" placeholder="Teléfono" required>
                   </div><br>
               </form>
             </div>
@@ -68,41 +68,41 @@
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Calle:</label>
-                    <input type="text" class="form-control" placeholder="Calle">
+                    <input type="text" class="form-control" placeholder="Calle" required>
                   </div>
                   <div class="col">
                     <label for="exampleInputPassword2">Colonia:</label>
-                    <input type="text" class="form-control" placeholder="Colonia">
+                    <input type="text" class="form-control" placeholder="Colonia" required>
                   </div>
                 </div><br>
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Num. Ext:</label>
-                    <input type="number" class="form-control" placeholder="Numero Exterior">
+                    <input type="number" class="form-control" placeholder="Numero Exterior" required>
                   </div>
                   <div class="col">
                     <label for="exampleInputPassword2">Num. Int:</label>
-                    <input type="number" class="form-control" placeholder="Numero Interior">
+                    <input type="number" class="form-control" placeholder="Numero Interior" required>
                   </div>
                 </div><br>
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Municipio:</label>
-                    <input type="text" class="form-control" placeholder="Municipio">
+                    <input type="text" class="form-control" placeholder="Municipio" required>
                   </div>
                   <div class="col">
                     <label for="exampleInputPassword2">C.P.:</label>
-                    <input type="text" class="form-control" placeholder="C.P.">
+                    <input type="text" class="form-control" placeholder="C.P." required>
                   </div>
                 </div><br>
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Estado:</label>
-                    <input type="text" class="form-control" placeholder="Estado">
+                    <input type="text" class="form-control" placeholder="Estado" required>
                   </div>
                   <div class="col">
                     <label for="exampleInputPassword2">Referencia:</label>
-                    <input type="text" class="form-control" placeholder="Referencia">
+                    <input type="text" class="form-control" placeholder="Referencia" required>
                   </div>
                 </div>
               </form>
@@ -132,7 +132,7 @@
                 <div class="form-row">
                   <div class="col">
                     <label for="exampleInputPassword1">Cargo:</label>
-                    <input type="number" class="form-control" placeholder="Cargo">
+                    <input type="text" class="form-control" placeholder="Cargo">
                   </div>
                 </div>
               </form>
@@ -160,7 +160,7 @@
                         3.- Solo puede anexar una identificación INE o un pasaporte vigente.
                       </li>
                       <li class="list-group-item">
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
                       </li>
                     </ul>
                   </div>
@@ -171,10 +171,8 @@
         </div>
         <!-- Subir credencial -->
 
-        <button type="button" class="btn btn-primary">
-            <a href="bienvenida.html" style="color: white;">
-              Registrar
-            </a>
+        <button type="submit" class="btn btn-primary" onclick="validarForm()">
+          Registrar
         </button>
         <button type="button" class="btn btn-primary">
           <a href="index.html" style="color: white;">
@@ -184,6 +182,12 @@
       </form>
 </div>
 
+<script>
+  $("#Registro").on('submit', function(e) {
+    e.preventDefault();
+    window.locationf='bienvenida.html';
+  });
+</script>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="bg-primary text-white text-center text-lg-start">
     <!-- Grid container -->
