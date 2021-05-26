@@ -2151,7 +2151,6 @@
                       </div>
                     </div><br>
                     <!-- Card de Legajos -->
-
                     <!-- Card de Libro Diario -->
                     <div class="card">
                       <div class="card-header">
@@ -2164,11 +2163,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2014</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroDiario1" onchange="ActualizarLibroDiarioTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2015</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroDiario2" onchange="ActualizarLibroDiarioTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2180,11 +2179,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2016</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroDiario3" onchange="ActualizarLibroDiarioTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2017</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroDiario4" onchange="ActualizarLibroDiarioTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2196,7 +2195,7 @@
                               <div class="form-group row">
                                 <div class="col-sm-12">
                                   <label class="col-sm-6 col-form-label">Total:</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="totalLibroDiario" value="0" readonly>
                                 </div>
                               </div>
                             </div>
@@ -2217,11 +2216,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2014</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroMayor1" onchange="ActualizarLibroMayorTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2015</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroMayor2" onchange="ActualizarLibroMayorTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2233,11 +2232,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2016</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroMayor3" onchange="ActualizarLibroMayorTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2017</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroMayor4" onchange="ActualizarLibroMayorTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2249,7 +2248,7 @@
                               <div class="form-group row">
                                 <div class="col-sm-12">
                                   <label class="col-sm-6 col-form-label">Total:</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="totalLibroMayor" value="0" readonly>
                                 </div>
                               </div>
                             </div>
@@ -2270,11 +2269,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2014</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroInventarios1" onchange="ActualizarLibroInventariosTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2015</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroInventarios2" onchange="ActualizarLibroInventariosTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2286,11 +2285,11 @@
                               <div class="form-group row">
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2016</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroInventarios3" onchange="ActualizarLibroInventariosTotal()" value="0">
                                 </div><br>
                                 <div class="col-sm-6">
                                   <label class="col-sm-6 col-form-label">Número 2017</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="LibroInventarios4" onchange="ActualizarLibroInventariosTotal()" value="0">
                                 </div>
                               </div>
                             </div>
@@ -2302,7 +2301,7 @@
                               <div class="form-group row">
                                 <div class="col-sm-12">
                                   <label class="col-sm-6 col-form-label">Total:</label>
-                                  <input type="number" class="form-control">
+                                  <input type="number" class="form-control" id="totalLibroInventarios" value="0" readonly>
                                 </div>
                               </div>
                             </div>
@@ -2311,7 +2310,7 @@
                       </div>
                     </div><br>
                     <!-- Card de Libro Inventarios, Almacén y Balances -->
-                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+                    <!-- Card de Comentarios -->
                     <div class="card">
                       <div class="card-header">
                         Comentarios
@@ -2321,7 +2320,7 @@
                           <div class="row">
                             <div class="col-md-12">
                               <div class="form-group row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-12">
                                   <textarea name="comentario" id="dd" class="form-control" rows="10">...</textarea>
                                 </div><br>
                               </div>
@@ -2330,7 +2329,7 @@
                           <!-- Primeros Input -->
                       </div>
                     </div><br>
-                    <!-- Card de Libro Inventarios, Almacén y Balances -->
+                    <!-- Card de Comentarios -->
 
                   </div>
                 </div>
@@ -2442,6 +2441,14 @@
                             </div>
                           </div>
                           <!-- Terceros Input -->
+                          <!-- Comentarios -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <label class="col-sm-12 col-form-label">Comentarios</label>
+                              <textarea name="" id="" rows="10" class="form-control"></textarea>
+                            </div>
+                          </div>
+                          <!-- Comentarios -->
                       </div>
                     </div><br>
                     <!-- Card de Primero -->
@@ -2506,26 +2513,16 @@
                     </select>
                   </div>
                   <div class="card-body">
-                    <!-- Cambios de Situacion Fiscal -->
+                    <!-- 1. Cambios de Situacion Fiscal -->
+                    <div>
                     <div class="row">
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-12 col-form-label text-center">Cambios de situación Fiscal del Registro Federal de Contribuyentes</label>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Fecha:</label>
-                            <input type="date" class="form-control" placeholder="Fecha">
-                          </div>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Folio:</label>
-                            <input type="text" class="form-control" placeholder="Folio">
-                          </div>
-                        </div>
+                        <label class="col-sm-12 col-form-label text-center">1. Cambios de situación Fiscal del Registro Federal de Contribuyentes</label>
                       </div>
                     </div><br>
-                    <!-- Cambios de Situacion Fiscal -->
-                    <!-- Inscripción -->
                     <div class="row">
-                      <div class="col-md-12">
+                      <!-- Inscripcion -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Inscripción</label>
                           <div class="col-sm-6">
@@ -2538,11 +2535,9 @@
                           </div>
                         </div>
                       </div>
-                    </div><br>
-                    <!-- Inscripción -->
-                    <!-- Cambio de Domicilio -->
-                    <div class="row">
-                      <div class="col-md-12">
+                      <!-- Inscripcion -->
+                      <!-- Cambio de Domicilio -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Cambio de Domicilio</label>
                           <div class="col-sm-6">
@@ -2555,11 +2550,11 @@
                           </div>
                         </div>
                       </div>
-                    </div><br>
-                    <!-- Cambio de Domicilio -->
-                    <!-- Avisos -->
+                      <!-- Cambio de Domicilio -->
+                    </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <!-- Avisos -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Avisos</label>
                           <div class="col-sm-6">
@@ -2572,11 +2567,9 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- Avisos -->
-                    <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
-                    <div class="row">
-                      <div class="col-md-12">
+                      <!-- Avisos -->
+                      <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS)</label>
                           <div class="col-sm-6">
@@ -2589,13 +2582,18 @@
                           </div>
                         </div>
                       </div>
+                      <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
                     </div>
-                    <!-- Requerimientos de Entidad Fiscalizadora (SAT, SFA, IMSS) -->
-                    <!-- Declaraciones mensuales -->
+                    </div>
+                    <!-- 1. Cambios de Situacion Fiscal -->
+                    <br>
+
+
+                    <!-- 2. Declaraciones mensuales -->
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
-                          <label class="col-sm-12 col-form-label text-center">Declaraciones mensuales: Entero, Retenciones y Operaciones con Terceros</label>
+                          <label class="col-sm-12 col-form-label text-center">2. Declaraciones mensuales: Entero, Retenciones y Operaciones con Terceros</label>
                           <div class="col-sm-6">
                             <label class="col-sm-12 col-form-label">Fecha:</label>
                             <input type="date" class="form-control" placeholder="Fecha">
@@ -2607,12 +2605,14 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Declaraciones mensuales --> 
-                    <!-- Declaraciones de Impuesto -->
+                    <!-- 2. Declaraciones mensuales -->
+                    <br>
+
+                    <!-- 3. Declaraciones de Impuesto -->
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group row">
-                          <label class="col-sm-12 col-form-label text-center">Declaraciones de Impuesto sobre Erogaciones por remuneraciones al Trabajo Personal</label>
+                          <label class="col-sm-12 col-form-label text-center">3. Declaraciones de Impuesto sobre Erogaciones por remuneraciones al Trabajo Personal</label>
                           <div class="col-sm-6">
                             <label class="col-sm-12 col-form-label">Fecha:</label>
                             <input type="date" class="form-control" placeholder="Fecha">
@@ -2624,27 +2624,19 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Declaraciones de Impuesto -->
-                    <!-- Declaraciones Anuales Informativas -->
+                    <!-- 3. Declaraciones de Impuesto -->
+                    <br>
+
+                    <!-- 4. Declaraciones Anuales Informativas -->
+                    <div>
                     <div class="row">
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-12 col-form-label text-center">Declaraciones Anuales Informativas</label>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Fecha:</label>
-                            <input type="date" class="form-control" placeholder="Fecha">
-                          </div>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Folio:</label>
-                            <input type="text" class="form-control" placeholder="Folio">
-                          </div>
-                        </div>
+                        <label class="col-sm-12 col-form-label text-center">4. Declaraciones Anuales Informativas</label>
                       </div>
-                    </div>
-                    <!-- Declaraciones Anuales Informativas -->
-                    <!-- Sueldos y Salarios -->
+                    </div><br>
                     <div class="row">
-                      <div class="col-md-12">
+                      <!-- Sueldos y Salarios -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Sueldos y Salarios</label>
                           <div class="col-sm-6">
@@ -2657,11 +2649,9 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- Sueldos y Salarios -->
-                    <!-- Clientes y Proveedores -->
-                    <div class="row">
-                      <div class="col-md-12">
+                      <!-- Sueldos y Salarios -->
+                      <!-- Clientes y Proveedores -->
+                      <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Clientes y Proveedores</label>
                           <div class="col-sm-6">
@@ -2674,10 +2664,10 @@
                           </div>
                         </div>
                       </div>
+                      <!-- Clientes y Proveedores -->
                     </div>
-                    <!-- Clientes y Proveedores -->
-                    <!-- Retenciones ISR -->
                     <div class="row">
+                      <!-- Retenciones ISR -->
                       <div class="col-md-12">
                         <div class="form-group row">
                           <label class="col-sm-12 col-form-label text-center">Retenciones ISR</label>
@@ -2691,25 +2681,86 @@
                           </div>
                         </div>
                       </div>
+                      <!-- Retenciones ISR -->
                     </div>
-                    <!-- Retenciones ISR -->
+                    </div>
+                    <!-- 4. Declaraciones Anuales Informativas -->
+                    <br>
+
                     <!-- Otros(especifíque) -->
+                    <div>
                     <div class="row">
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-12 col-form-label text-center">Otros(especifíque)</label>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Fecha:</label>
-                            <input type="date" class="form-control" placeholder="Fecha">
-                          </div>
-                          <div class="col-sm-6">
-                            <label class="col-sm-12 col-form-label">Folio:</label>
-                            <input type="text" class="form-control" placeholder="Folio">
-                          </div>
+                        <label class="col-sm-12 col-form-label text-center">Otros(especifíque)</label>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="4">
+                              <label class="col-sm-12 col-form-label">Nombre:</label>
+                              <input type="text" class="form-control" placeholder="Nombre" id="NombreAnexo9">
+                            </th>
+                            <th scope="col" colspan="3">
+                              <label class="col-sm-12 col-form-label">Fecha:</label>
+                              <input type="date" class="form-control" placeholder="Fecha" id="FechaAnexo9">
+                            </th>
+                            <th scope="col" colspan="3">
+                              <label class="col-sm-12 col-form-label">Folio:</label>
+                              <input type="text" class="form-control" placeholder="Folio" id="FolioAnexo9">
+                            </th>
+                            <th scope="col" colspan="2">
+                              <button class="btn btn-success" onclick="AgregarRowAnexo9()">Agregar</button>
+                            </th>
+                          </tr>
+                        </thead>
+                      </table> 
+                    </div>
+                    <div class="row">
+                      <table class="table">
+                        <tbody id="CuerpoAnexo9">
+                          <!-- Cuerpo de la Tabla -->
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+                    <!-- Otros(especifíque) -->
+
+                    <!-- Se Entrega en este momento -->
+                    <div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-group">
+                            <li class="list-group-item">Se entregan en este momento:</li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> CONTRASEÑA DEL SAT
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> FIRMA ELECTRÓNICA Y CONTRASEÑA DEL SAT E I.M.S.S.
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> OPINIÓN DE CUMPLIMIENTO DE OBLIGACIONES FISCALES POR PARTE DEL SAT CON FECHA 30 DE SEPTIEMBRE 2018
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> CORREO ELECTRÓNICO PROPORCIONADO AL S.A.T. E I.M.S.S Y CONTRASEÑA
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> SISTEMA DE SOFTWARE CON EL QUE SE EMITEN LOS CFDI'S, USUARIO Y CONTRASEÑA
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> SEÑALAR LA RUTA DE LA CARPETA DE ARCHIVO DONDE SE ENCUENTREN UBICADOS LOS CFDI's EMITIDOS EN FORMATO XML Y PDF DEL EJERCICIO DE 2018.
+                            </li>
+                            <li class="list-group-item">
+                              <input type="checkbox" aria-label="Checkbox for following text input"> SEÑALAR LA RUTA DE LA CARPETA DE ARCHIVO DONDE SE ENCUENTREN UBICADOS LOS CFDI's RECIBIDOS EN FORMATO XML Y PDF DEL EJERCICIO DE 2018.
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
-                    <!-- Avisos -->
+                    <!-- Se Entrega en este momento -->
+
                   </div>
                 </div>
                 <!-- Cuerpo -->
@@ -3893,6 +3944,47 @@ function AgregarFila7(){
                               "<td>" + Importe7 + "</td>" +
                               "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
                             "</tr>");
+}
+
+function ActualizarLibroDiarioTotal(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 4; i++){
+    sumaTotal += parseInt($('#LibroDiario' + i).val(), 10);
+  }
+  $('#totalLibroDiario').val(sumaTotal);
+}
+
+function ActualizarLibroMayorTotal(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 4; i++){
+    sumaTotal += parseInt($('#LibroMayor' + i).val(), 10);
+  }
+  $('#totalLibroMayor').val(sumaTotal);
+}
+
+function ActualizarLibroInventariosTotal(){
+  var sumaTotal = 0;
+  for(var i = 1; i <= 4; i++){
+    sumaTotal += parseInt($('#LibroInventarios' + i).val(), 10);
+  }
+  $('#totalLibroInventarios').val(sumaTotal);
+}
+
+function AgregarRowAnexo9(){
+  var NombreAnexo9 = $('#NombreAnexo9').val();
+  var FechaAnexo9 = $('#FechaAnexo9').val();
+  var FolioAnexo9 = $('#FolioAnexo9').val();
+
+  $('#CuerpoAnexo9').append("<tr>" + 
+                              "<td>" + NombreAnexo9 + "</td>" +
+                              "<td>" + FechaAnexo9 + "</td>" +
+                              "<td>" + FolioAnexo9 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+
+  $('#NombreAnexo9').val(' ');
+  $('#FechaAnexo9').val(' ');
+  $('#FolioAnexo9').val(' ');
 }
 
 function EsconderCuerpoAnexo10(idCuerpo){
