@@ -3477,6 +3477,1895 @@
       </div>
       <!-- Anexo 10 -->
 
+      <!-- Anexo 11 -->
+      <div class="container" id="ConstruccionAnexo-11" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  Conciliación Bancaria
+                </div>
+                <div class="card-body">
+          
+                  <!-- Cuerpo -->
+                  <div class="col-md-12">
+                    <!-- Card de Datos Generales -->
+                    <div class="card">
+                      <div class="card-header">
+                        Datos Generales
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Banco:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-6">
+                            <label>Número de Cuenta:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Lista de Cuentas (5º Nivel):</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-6">
+                            <label>Fuente de Financiamiento:</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Saldo según el Estado de Cuenta Bancario:</label>
+                            <input type="number" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card de Datos Generales -->
+                    <br>
+
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <div class="card">
+                      <div class="card-header">
+                        Depósitos Contables no registrados por el Banco
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Concepto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody id="CuerpoTabla1Anexo11">
+                              <tr>
+                                <td>
+                                  <input type="date" class="form-control" id="Fecha11-1">
+                                </td>
+                                <td>
+                                  <input type="text" class="form-control" id="Concepto11-1">
+                                </td>
+                                <td>
+                                  <input type="number" class="form-control" id="Cantidad11-1">
+                                </td>
+                                <td>
+                                  <button class="btn btn-success" onclick="AgregarTabla111()">Agregar</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Total:</label>
+                            <input type="number" id="TotalTabla1" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <br>
+
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <div class="card">
+                      <div class="card-header">
+                        Cargos Bancarios no contabilizados
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Concepto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody id="CuerpoTabla2Anexo11">
+                              <tr>
+                                <td>
+                                  <input type="date" class="form-control" id="Fecha11-2">
+                                </td>
+                                <td>
+                                  <input type="text" class="form-control" id="Concepto11-2">
+                                </td>
+                                <td>
+                                  <input type="number" class="form-control" id="Cantidad11-2">
+                                </td>
+                                <td>
+                                  <button class="btn btn-success" onclick="AgregarTabla112()">Agregar</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Total:</label>
+                            <input type="number" id="TotalTabla2" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <br>
+
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <div class="card">
+                      <div class="card-header">
+                        Cheques Expedidos y Contabilizados no Cobrados (En Tránsito):
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Concepto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody id="CuerpoTabla3Anexo11">
+                              <tr>
+                                <td>
+                                  <input type="date" class="form-control" id="Fecha11-3">
+                                </td>
+                                <td>
+                                  <input type="text" class="form-control" id="Concepto11-3">
+                                </td>
+                                <td>
+                                  <input type="number" class="form-control" id="Cantidad11-3">
+                                </td>
+                                <td>
+                                  <button class="btn btn-success" onclick="AgregarTabla113()">Agregar</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Total:</label>
+                            <input type="number" id="TotalTabla2" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card Depositos Contables no registrados en el banco -->
+                    <br>
+
+                    <!-- Card Saldo segun Municipio -->
+                    <div class="card">
+                      <div class="card-header">
+                        Saldo según municipio
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label>Total:</label>
+                            <input type="number" id="TotalSegunMunicipio" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- Card Saldo segun Municipio -->
+                    <br>
+
+                    <!-- Card Reglas -->
+                    <div class="card">
+                      <div class="card-header">
+                        Notas
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            EL IMPORTE DE "SALDO SEGÚN MUNICIPIO" DEBE COINCIDIR AL PRESENTADO EN LA BALANZA DE COMPROBACIÓN
+                          </li>
+                          <li class="list-group-item">
+                            LA SUMA DE LOS IMPORTES DE LOS TOTALES DEL ANEXO 10 MÁS LA SUMA DE LOS TOTALES DEL ANEXO 11, DEBE COINCIDIR CON LO PRESENTADO EN EL RUBRO DE EFECTIVO Y EQUIVALENTES DE: ESTADO DE SITUACIÓN FINANCIERA, ESTADO ANALÍTICO DEL ACTIVO Y BALANZA DE COMPROBACIÓN
+                          </li>
+                          <li class="list-group-item">
+                            SE DEBERÁN ANEXAR ESTADO DE CUENTA BANCARIO AL 14 DE OCTUBRE DE 2018 Y AUXILIAR DE MAYOR, USUARIO Y CONTRASEÑA PARA ACCEDER A LA PÁGINA DEL BANCO, Y EN SU CASO EL TOKEN.
+                          </li>
+                          <li class="list-group-item">
+                            SE DEBERÁ ENTREGAR EXCLUSIVAMENTE A LA ADMINISTRACIÓN ENTRANTE: ESTADOS DE CUENTA BANCARIOS, CONCILIACIONES BANCARIAS Y EN MEDIO MAGNÉTICO AUXILIARES DE MAYOR DE ENERO A OCTUBRE DE 2018.
+                          </li>
+                          <li class="list-group-item">
+                            SE DEBERÁ ENTREGAR AL REPRESENTANTE DE LA AUDITORÍA SUPERIOR DEL ESTADO DE PUEBLA: ESTADOS DE CUENTA BANCARIOS, Y CONCILIACIONES BANCARIAS DE SEPTIEMBRE Y OCTUBRE DE 2018.
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- Card Reglas -->
+                  </div>  
+                  <!-- Cuerpo -->
+          
+                </div>
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 11 -->
+
+      <!-- Anexo 12 -->
+      <div class="container" id="ConstruccionAnexo-12" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación del Último Cheque Expedido por cada una de las cuentas bancarias
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Número de Cuenta Bancaria</label>
+                          <input type="number" class="form-control" id="NumCuenta12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Código Conforme al Listado de Cuentas (Hasta 5º Nivel)</label>
+                          <input type="number" class="form-control" id="Codigo12">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Póliza de Registro del Documento Expedido</label>
+                          <input type="number" class="form-control" id="Poliza12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Concepto del Pago</label>
+                          <input type="text" class="form-control" id="Concepto12">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Nombre de la Institución Bancaria</label>
+                          <input type="text" class="form-control" id="Institucion12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fuente de Financiamiento</label>
+                          <input type="text" class="form-control" id="Financiamiento12">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Clasificador por Objeto del Gasto</label>
+                          <input type="text" class="form-control" id="Clasificador12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Número del último cheque expedido</label>
+                          <input type="number" class="form-control" id="Ultimo12">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Fecha:</label>
+                          <input type="date" class="form-control" id="Fecha12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Estatus del Documento</label>
+                          <select id="Estatus12" class="form-control">
+                            <option value="Transito">Transito</option>
+                            <option value="Pagado">Pagado</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Importe:</label>
+                          <input type="number" class="form-control" id="Importe12">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Tipo de Recurso</label>
+                          <select id="Recurso12" class="form-control">
+                            <option value="Recursos Propios">Recursos Propios</option>
+                            <option value="Participaciones">Participaciones</option>
+                            <option value="FISM">FISM</option>
+                            <option value="FORTAMUN">FORTAMUN</option>
+                            <option value="FONDEN">FONDEN</option>
+                            <option value="Estatales">Estatales</option>
+                            <option value="Reasignados">Reasignados</option>
+                            <option value="Créditos">Créditos</option>
+                            <option value="Ramo 20">Ramo 20</option>
+                            <option value="Otros">Otros</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label>Beneficiario</label>
+                          <textarea id="Beneficiario12" rows="10" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla12()">Agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Numero de cuenta bancaría</th>
+                                  <th scope="col">Código conforme al listado de cuentas</th>
+                                  <th scope="col">Póliza de registro</th>
+                                  <th scope="col">Concepto del pago</th>
+                                  <th scope="col">Institución bancaria</th>
+                                  <th scope="col">Fuente de financiamiento</th>
+                                  <th scope="col">Clasificador por Objeto del Gasto</th>
+                                  <th scope="col">Número del último cheque expedido</th>
+                                  <th scope="col">Fecha</th>
+                                  <th scope="col">Estatus del documento</th>
+                                  <th scope="col">Importe</th>
+                                  <th scope="col">Tipo</th>
+                                  <th scope="col">Beneficiario</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla12">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 12 -->
+
+      <!-- Anexo 13 -->
+      <div class="container" id="ConstruccionAnexo-13" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación Cheques Expedidos por entregar o Transferencias por Realizar a beneficiarios
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Fecha:</label>
+                          <input type="date" class="form-control" id="Fecha13">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Número de Cheque</label>
+                          <input type="number" class="form-control" id="Cheque13">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Número de Cuenta</label>
+                          <input type="number" class="form-control" id="Numero13">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Banco</label>
+                          <input type="text" class="form-control" id="Banco13">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Código conforme al listado de Cuentas</label>
+                          <input type="text" class="form-control" id="Codigo13">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Póliza de Registro del Documento expedido</label>
+                          <input type="text" class="form-control" id="Poliza13">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Concepto de Pago</label>
+                          <input type="text" class="form-control" id="Concepto13">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fuente de Financiamiento</label>
+                          <input type="text" class="form-control" id="Fuente13">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Clasificador por Objeto</label>
+                          <input type="text" class="form-control" id="Clasificador13">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fecha del cheque</label>
+                          <input type="date" class="form-control" id="Fecha213">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Concepto</label>
+                          <input type="text" class="form-control" id="Concepto213">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Importe</label>
+                          <input type="number" class="form-control" id="Importe13">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Beneficiario</label>
+                          <textarea id="Beneficiario13" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                          <label>Observaciones</label>
+                          <textarea id="Observaciones13" rows="5" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla13()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Fecha</th>
+                                  <th scope="col">Número de Cheque</th>
+                                  <th scope="col">Número de Cuenta</th>
+                                  <th scope="col">Banco</th>
+                                  <th scope="col">Código conforme al Listado</th>
+                                  <th scope="col">Póliza de registro</th>
+                                  <th scope="col">Concepto de Pago</th>
+                                  <th scope="col">Fuente de Financiamiento</th>
+                                  <th scope="col">Clasificador por Objeto</th>
+                                  <th scope="col">Fecha del cheque</th>
+                                  <th scope="col">Concepto</th>
+                                  <th scope="col">Beneficiario</th>
+                                  <th scope="col">Importe</th>
+                                  <th scope="col">Observaciones</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla13">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 13 -->
+
+      <!-- Anexo 14 -->
+      <div class="container" id="ConstruccionAnexo-14" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación Cheques Expedidos por entregar o Transferencias por Realizar a beneficiarios
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Lista de cuentas (5º Nivel)</label>
+                          <input type="text" class="form-control" id="Lisa14">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fuente de financiamiento</label>
+                          <input type="text" class="form-control" id="Fuente14">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Número de cuenta bancaria</label>
+                          <input type="number" class="form-control" id="Cuenta14">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Banco</label>
+                          <input type="text" class="form-control" id="Banco14">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Nombre del titular que cancela su cuenta</label>
+                          <input type="text" class="form-control" id="Nombre14">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Fecha de cancelación</label>
+                          <input type="date" class="form-control" id="Fecha14">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla14()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Lista de Cuentas</th>
+                                  <th scope="col">Fuente de financiamiento</th>
+                                  <th scope="col">Número de cuenta bancaria</th>
+                                  <th scope="col">Banco</th>
+                                  <th scope="col">Nombre del titular que cancela su cuenta</th>
+                                  <th scope="col">Fecha de cancelación</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla14">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 14 -->
+
+      <!-- Anexo 15 -->
+      <div class="container" id="ConstruccionAnexo-15" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación padrones actualizados de usuarios y contribuyentes
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Número</label>
+                          <input type="number" class="form-control" id="Numero15">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Nombre del padrón</label>
+                          <input type="text" class="form-control" id="Nombre15">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Existe</label>
+                          <select id="Existe15" class="form-control">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label>Nombre del responsable</label>
+                          <input type="text" class="form-control" id="Responsable15">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Medios mágneticos entregados</label>
+                          <input type="number" class="form-control" id="Medios15">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Área</label>
+                          <input type="text" class="form-control" id="Area15">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla15()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Número</th>
+                                  <th scope="col">Nombre del padrón</th>
+                                  <th scope="col">Existe</th>
+                                  <th scope="col">Nombre del responsable</th>
+                                  <th scope="col">Medios magnéticos entregados</th>
+                                  <th scope="col">Área</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla15">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 15 -->
+
+      <!-- Anexo 16 -->
+      <div class="container" id="ConstruccionAnexo-16" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Inventario de formas valoradas por utilizar
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Nombre</label>
+                          <input type="text" class="form-control" id="Nombre16">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Lista de cuentas (Hsta 5º Nivel)</label>
+                          <input type="text" class="form-control" id="Lista16">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Clasificado por objeto</label>
+                          <input type="text" class="form-control" id="Clasificado16">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Tipo de gasto</label>
+                          <input type="text" class="form-control" id="Tipo16">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Tipo</label>
+                          <input type="text" class="form-control" id="Tipo216">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Número de formato</label>
+                          <input type="number" class="form-control" id="Formato16">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Folios</label>
+                          <input type="text" class="form-control" id="Folios16">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Precio unitario</label>
+                          <input type="number" class="form-control" id="Precio16">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <label>Importe</label>
+                          <input type="text" class="form-control" id="Importe16">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla16()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Nombre</th>
+                                  <th scope="col">Lista de cuentas (Hasta 5º Nivel)</th>
+                                  <th scope="col">Clasificador por objeto</th>
+                                  <th scope="col">Tipo de gasto</th>
+                                  <th scope="col">Tipo</th>
+                                  <th scope="col">Número de formato</th>
+                                  <th scope="col">Folios</th>
+                                  <th scope="col">Precio unitario</th>
+                                  <th scope="col">Importe</th>
+                                  <th scope="col">Eliminar</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla16">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8 text-right">
+                          <label>Total</label>
+                        </div>
+                        <div class="col-md-4 text-right">
+                          <input type="number" class="form-control" id="Importe16">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+                    <br>
+
+                    <!-- Instrucciones -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              LA SUMA DE LOS IMPORTES TOTALES DEL ANEXO 16 Y 23 DEBERÁ COINCIDIR CON EL IMPORTE PRESENTADO EN EL RUBRO DE ALMACÉN, EN EL ESTADO DE SITUACIÓN FINANCIERO, EL ESTADO ANALÍTICO DEL ACTIVO Y BALANZA DE COMPROBACIÓN.
+                            </li>
+                            <li class="list-group-item">
+                              SE DEBERÁ ENTREGAR EXCLUSIVAMENTE A LA ADMINISTRACIÓN ENTRANTE EL CONTROL INTERNO DE ALMACÉN
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Instrucciones -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 16 -->
+
+      <!-- Anexo 17 -->
+      <div class="container" id="ConstruccionAnexo-17" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación de escrituras públicas
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Número</label>
+                          <input type="number" class="form-control" id="Numero17">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Listado de cuentas</label>
+                          <input type="text" class="form-control" id="Lista17">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Clasificador por objeto</label>
+                          <input type="text" class="form-control" id="Clasificador17">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Código de relación</label>
+                          <input type="number" class="form-control" id="Codigo17">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Fecha adquisición</label>
+                          <input type="date" class="form-control" id="Fecha71">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Tipo Documento</label>
+                          <select id="Tipo17" class="form-control">
+                            <option value="Minuta">Minuta</option>
+                            <option value="Escritura">Escritura</option>
+                            <option value="Contrato compra-venta">Contrato compra-venta</option>
+                            <option value="Certificado parcelario">Certificado parcelario</option>
+                            <option value="Otro">Otro</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Descripción del uso de inmueble</label>
+                          <input type="text" class="form-control" id="Descripcion17">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Valor catastral</label>
+                          <input type="number" class="form-control" id="Valor17">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Ubicación del bien inmueble</label>
+                          <input type="text" class="form-control" id="Ubicacion17">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla17()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Número</th>
+                                  <th scope="col">Listado de cuentas</th>
+                                  <th scope="col">Clasificador por objeto</th>
+                                  <th scope="col">Código de relación</th>
+                                  <th scope="col">Fecha adquisición</th>
+                                  <th scope="col">Tipo documento</th>
+                                  <th scope="col">Descripción de uso de inmueble</th>
+                                  <th scope="col">Valor catastral</th>
+                                  <th scope="col">Ubicación de inmueble</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla17">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+                <br>
+
+                <!-- Cuerpo 2 -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación de registro contable de escrituras públicas de 2018 a 2021
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Código de la relación</label>
+                          <input type="number" class="form-control" id="Codigo172">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Póliza de registro</label>
+                          <input type="text" class="form-control" id="Poliza172">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Ejercicio de registro</label>
+                          <input type="text" class="form-control" id="Ejercicio172">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Listado de cuentas (Hasta 5º Nivel)</label>
+                          <input type="text" class="form-control" id="Listado172">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Clasificador por objeto</label>
+                          <input type="text" class="form-control" id="Clasificador172">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Importe</label>
+                          <input type="number" class="form-control" id="Importe172">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla172()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Código de relación</th>
+                                  <th scope="col">Póliza de registro</th>
+                                  <th scope="col">Ejercicio de registro</th>
+                                  <th scope="col">Listado de cuentas (Hasta 5º nivel)</th>
+                                  <th scope="col">Clasificador de objeto</th>
+                                  <th scope="col">Importe</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla172">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>
+                <!-- Cuerpo 2 -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 17 -->
+
+      <!-- Anexo 18 -->
+      <div class="container" id="ConstruccionAnexo-18" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación de bienes inmuebles
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Fecha</label>
+                          <input type="date" class="form-control" id="Fecha18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Listado de cuentas (Hasta 5º Nivel)</label>
+                          <input type="text" class="form-control" id="Lista18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Clasificador por objeto</label>
+                          <input type="text" class="form-control" id="Clasificador18">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Código de relación</label>
+                          <input type="number" class="form-control" id="Codigo18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Fecha adquisición</label>
+                          <input type="date" class="form-control" id="Fecha218">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Número de folio</label>
+                          <input type="number" class="form-control" id="Folio18">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Concepto</label>
+                          <input type="text" class="form-control" id="Concepto18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Costo de adquisición</label>
+                          <input type="number" class="form-control" id="Costo18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Secretaría</label>
+                          <input type="text" class="form-control" id="Secretaria18">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Inventario</label>
+                          <input type="text" class="form-control" id="Inventario18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Resguardante</label>
+                          <input type="text" class="form-control" id="Resguardante18">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Ubicación</label>
+                          <input type="text" class="form-control" id="Ubicacion18">
+                        </div>
+                      </div>
+                      <br>
+
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla18()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Fecha</th>
+                                  <th scope="col">Listado de cuentas</th>
+                                  <th scope="col">Clasificador por objeto</th>
+                                  <th scope="col">Código de relación</th>
+                                  <th scope="col">Fecha de adquisición</th>
+                                  <th scope="col">Número de folio</th>
+                                  <th scope="col">Concepto</th>
+                                  <th scope="col">Costo adquisición</th>
+                                  <th scope="col">Secretaría</th>
+                                  <th scope="col">Inventario</th>
+                                  <th scope="col">Resguardante</th>
+                                  <th scope="col">Ubicación</th>
+                                  <th scope="col">Eliminar</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla18">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 18 -->
+
+      <!-- Anexo 19 -->
+      <div class="container" id="ConstruccionAnexo-19" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- RELACIÓN DE CONTRATOS VIGENTES -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación de contratos vigentes celebrados por la administración que entrega
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Instrucciones -->
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        El monto total contratado deberá ser conciliado con la cuenta 8.2.4 Presupuesto de Egresos Comprometido
+                      </li>
+                      <li class="list-group-item">
+                        El monto devengado deberá ser conciliado con la cuenta 8.2.5 Presupuesto de Egresos Devengado
+                      </li>
+                      <li class="list-group-item">
+                        Se deberá entregar exclusivamente a la administración entrante los contratos detallados en el anexo
+                      </li>
+                    </ul>
+                    <!-- Instrucciones -->
+                    <br>
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Número</label>
+                          <input type="number" class="form-control" id="Numero19">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Tipo</label>
+                          <select id="Tipo19" class="form-control">
+                            <option value="Arrendamiento">Arrendamiento</option>
+                            <option value="Bienes">Bienes</option>
+                            <option value="Servicio">Servicio</option>
+                            <option value="Obra pública">Obra pública</option>
+                            <option value="Compra - venta">Compra - venta</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <label>Nombre del proveedor</label>
+                          <input type="text" class="form-control" id="Proveedor19">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Objeto del contrato</label>
+                          <input type="text" class="form-control" id="Objeto19">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Período del contrato</label>
+                          <input type="text" class="form-control" id="Periodo19">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Monto contratado</label>
+                          <input type="number" class="form-control" id="Monto19">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Monto devengado</label>
+                          <input type="number" class="form-control" id="Devengado19">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Saldo comprometido</label>
+                          <input type="number" class="form-control" id="Saldo19">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla19()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Número</th>
+                                  <th scope="col">Tipo</th>
+                                  <th scope="col">Proveedor</th>
+                                  <th scope="col">Objeto del contrato</th>
+                                  <th scope="col">Período del contrato</th>
+                                  <th scope="col">Monto contratado</th>
+                                  <th scope="col">Monto devengado</th>
+                                  <th scope="col">Saldo comprometido</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla19">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                  <!-- Cantidades total -->
+                  <div class="card-footer">
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Monto contratado Total</label>
+                          <input type="number" class="form-control" id="MontoTotal19" readOnly>
+                        </div>
+                        <div class="col-md-4">
+                          <label>Monto devengado Total </label>
+                          <input type="number" class="form-control" id="DevengadoTotal19" readOnly>
+                        </div>
+                        <div class="col-md-4">
+                          <label>Saldo comprometido total</label>
+                          <input type="number" class="form-control" id="SaldoTotal19" readOnly>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+                  </div>
+                  <!-- Cantidades totales -->
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- RELACIÓN DE CONTRATOS VIGENTES -->
+            <br>
+
+            <!-- CONCILIACIÓN DEL MONTO DEVENGADO -->
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Conciliación del monto devengado de contratos vigentes
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Póliza de registro</label>
+                          <input type="text" class="form-control" id="Poliza192">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Listado de cuentas</label>
+                          <input type="text" class="form-control" id="Lista192">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Importe</label>
+                          <input type="number" class="form-control" id="Importe192">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla192()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Póliza de registro</th>
+                                  <th scope="col">Lista de cuentas</th>
+                                  <th scope="col">Importe</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla192">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- CONCILIACIÓN DEL MONTO DEVENGADO -->
+            <br>
+
+            <!-- CONCILIACIÓN DEL SALDO COMPROMETIDO DE CONTRATOS VIGENTES -->
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Conciliación del saldo comprometido de contratos vigentes
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Póliza de registro</label>
+                          <input type="text" class="form-control" id="Poliza193">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Listado de cuentas</label>
+                          <input type="text" class="form-control" id="Lista193">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Importe</label>
+                          <input type="number" class="form-control" id="Importe193">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla193()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Póliza de registro</th>
+                                  <th scope="col">Lista de cuentas</th>
+                                  <th scope="col">Importe</th>
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla193">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+        
+              </div>
+            </div>
+            <!-- CONCILIACIÓN DEL SALDO COMPROMETIDO DE CONTRATOS VIGENTES -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 19 -->
+
+      <!-- Anexo 20 -->
+      <div class="container" id="ConstruccionAnexo-20" style="display: none;">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 text-left">
+                <button class="btn btn-primary">Leyes Aplicables</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <p id="TituloAnexo"></p>
+              </div>
+              <div class="col-md-3 text-right">
+                <button class="btn btn-warning" data-toggle="modal" data-target="#RevisionModal">Revisión</button>
+              </div>
+            </div>
+      
+            <!-- Contenido 1 -->
+            <br>
+            <div class="card">
+              <div class="card-body">
+        
+                <!-- Cuerpo -->
+                <div class="card">
+                  <div class="card-header">
+                    Relación de cajas fuertes y/o llaves
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Ingresar Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Número</label>
+                          <input type="number" class="form-control" id="Numero20">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Responsable</label>
+                          <input type="text" class="form-control" id="Responsable20">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Ubicación</label>
+                          <input type="text" class="form-control" id="Ubicacion20">
+                        </div>
+                        <div class="col-md-6">
+                          <label>Combinación y/o llaves</label>
+                          <input type="text" class="form-control" id="Combinacion20">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <strong>Características de la caja</strong>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Marca</label>
+                          <input type="text" class="form-control" id="Marca20">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Modelo</label>
+                          <input type="text" class="form-control" id="Modelo20">
+                        </div>
+                        <div class="col-md-4">
+                          <label>Serie</label>
+                          <input type="text" class="form-control" id="Serie20">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 text-right">
+                          <button class="btn btn-success" onclick="AgregarTabla20()">Agregar</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Ingresar Información -->
+
+                    <!-- Tabla de Información -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Número</th>
+                                  <th scope="col">Responsable</th>
+                                  <th scope="col">Ubicación</th>
+                                  <th scope="col">Combinación/Llaves</th>
+
+                                  <th scope="col">Modelo de Caja</th>
+                                  <th scope="col">Marca de Caja</th>
+                                  <th scope="col">Serie de Caja</th>
+                                  <th scope="col">Eliminar</th>
+
+                                </tr>
+                              </thead>
+                              <tbody id="CuerpoTabla20">
+                                <!-- Cuerpo de tabla -->
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tabla de Información -->
+
+                  </div>
+                </div>        
+                <!-- Cuerpo -->
+                <br>
+
+        
+              </div>
+            </div>
+            <!-- Contenido 1 -->
+      
+            <!-- Boton para generar -->
+            <br>
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Generar Formato</button>
+              </div>
+              <div class="col-md-6 text-center">
+                <button class="btn btn-success">Guardar Cambios</button>
+              </div>
+            </div>
+            <!-- Boton para generar -->
+      
+          </div>
+        </div>
+      </div>
+      <!-- Anexo 20 -->
+
     </div>
     <!-- Contenido -->
   
@@ -3997,6 +5886,324 @@ function MostrarCuerpoAnexo10(idCuerpo){
   $('#CuerpoCardAnexo10-' + idCuerpo).show();
   $('#MostrarCuerpoAnexo-' + idCuerpo).css("display", "none");
   $('#EsconderCuerpoAnexo-' + idCuerpo).css("display", "inline-block");
+}
+
+function AgregarTabla111(){
+  var fecha = $('#Fecha11-1').val();
+  var concepto = $('#Concepto11-1').val();
+  var cantidad = $('#Cantidad11-1').val();
+
+  $('#CuerpoTabla1Anexo11').append("<tr>" + 
+                              "<td>" + fecha + "</td>" +
+                              "<td>" + concepto + "</td>" +
+                              "<td>" + cantidad + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla112(){
+  var fecha = $('#Fecha11-2').val();
+  var concepto = $('#Concepto11-2').val();
+  var cantidad = $('#Cantidad11-2').val();
+
+  $('#CuerpoTabla2Anexo11').append("<tr>" + 
+                              "<td>" + fecha + "</td>" +
+                              "<td>" + concepto + "</td>" +
+                              "<td>" + cantidad + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla113(){
+  var fecha = $('#Fecha11-3').val();
+  var concepto = $('#Concepto11-3').val();
+  var cantidad = $('#Cantidad11-3').val();
+
+  $('#CuerpoTabla3Anexo11').append("<tr>" + 
+                              "<td>" + fecha + "</td>" +
+                              "<td>" + concepto + "</td>" +
+                              "<td>" + cantidad + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla12(){
+  var numCuenta = $('#NumCuenta12').val();
+  var codigo = $('#Codigo12').val();
+  var poliza = $('#Poliza12').val();
+  var concepto = $('#Concepto12').val();
+  var institucion = $('#Institucion12').val();
+  var financiamiento = $('#Financiamiento12').val();
+  var clasificador = $('#Clasificador12').val();
+  var ultimo = $('#Ultimo12').val();
+  var fecha = $('#Fecha12').val();
+  var importe = $('#Importe12').val();
+  var recurso = $('#Recurso12').val();
+  var beneficiario = $('#Beneficiario12').val();
+
+  $('#CuerpoTabla12').append("<tr>" + 
+                              "<td>" + numCuenta + "</td>" +
+                              "<td>" + codigo + "</td>" +
+                              "<td>" + poliza + "</td>" +
+                              "<td>" + concepto + "</td>" +
+                              "<td>" + institucion + "</td>" +
+                              "<td>" + financiamiento + "</td>" +
+                              "<td>" + clasificador + "</td>" +
+                              "<td>" + ultimo + "</td>" +
+                              "<td>" + fecha + "</td>" +
+                              "<td>" + importe + "</td>" +
+                              "<td>" + recurso + "</td>" +
+                              "<td>" + beneficiario + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla13(){
+  var Fecha13 = $('#Fecha13').val();
+  var Cheque13 = $('#Cheque13').val();
+  var Numero13 = $('#Numero13').val();
+  var Banco13 = $('#Banco13').val();
+  var Codigo13 = $('#Codigo13').val();
+  var Poliza13 = $('#Poliza13').val();
+  var Concepto13 = $('#Concepto13').val();
+  var Fuente13 = $('#Fuente13').val();
+  var Clasificador13 = $('#Clasificador13').val();
+  var Fecha213 = $('#Fecha213').val();
+  var Concepto213 = $('#Concepto213').val();
+  var Importe13 = $('#Importe13').val();
+  var Beneficiario13 = $('#Beneficiario13').val();
+  var Observaciones13 = $('#Observaciones13').val();
+
+  $('#CuerpoTabla13').append("<tr>" + 
+                              "<td>" + Fecha13 + "</td>" +
+                              "<td>" + Cheque13 + "</td>" +
+                              "<td>" + Numero13 + "</td>" +
+                              "<td>" + Banco13 + "</td>" +
+                              "<td>" + Codigo13 + "</td>" +
+                              "<td>" + Poliza13 + "</td>" +
+                              "<td>" + Concepto13 + "</td>" +
+                              "<td>" + Fuente13 + "</td>" +
+                              "<td>" + Clasificador13 + "</td>" +
+                              "<td>" + Fecha213 + "</td>" +
+                              "<td>" + Concepto213 + "</td>" +
+                              "<td>" + Importe13 + "</td>" +
+                              "<td>" + Beneficiario13 + "</td>" +
+                              "<td>" + Observaciones13 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla14(){
+  var Lisa14 = $('#Lisa14').val();
+  var Fuente14 = $('#Fuente14').val();
+  var Cuenta14 = $('#Cuenta14').val();
+  var Banco14 = $('#Banco14').val();
+  var Nombre14 = $('#Nombre14').val();
+  var Fecha14 = $('#Fecha14').val();
+
+  $('#CuerpoTabla14').append("<tr>" + 
+                              "<td>" + Lisa14 + "</td>" +
+                              "<td>" + Fuente14 + "</td>" +
+                              "<td>" + Cuenta14 + "</td>" +
+                              "<td>" + Banco14 + "</td>" +
+                              "<td>" + Nombre14 + "</td>" +
+                              "<td>" + Fecha14 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla15(){
+  var Numero15 = $('#Numero15').val();
+  var Nombre15 = $('#Nombre15').val();
+  var Existe15 = $('#Existe15').val();
+  var Responsable15 = $('#Responsable15').val();
+  var Medios15 = $('#Medios15').val();
+  var Area15 = $('#Area15').val();
+
+  $('#CuerpoTabla15').append("<tr>" + 
+                              "<td>" + Numero15 + "</td>" +
+                              "<td>" + Nombre15 + "</td>" +
+                              "<td>" + Existe15 + "</td>" +
+                              "<td>" + Responsable15 + "</td>" +
+                              "<td>" + Medios15 + "</td>" +
+                              "<td>" + Area15 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla16(){
+  var Nombre16 = $('#Nombre16').val();
+  var Lista16 = $('#Lista16').val();
+  var Clasificado16 = $('#Clasificado16').val();
+  var Tipo16 = $('#Tipo16').val();
+  var Tipo216 = $('#Tipo216').val();
+  var Formato16 = $('#Formato16').val();
+  var Folios16 = $('#Folios16').val();
+  var Precio16 = $('#Precio16').val();
+  var Importe16 = $('#Importe16').val();
+
+  $('#CuerpoTabla16').append("<tr>" + 
+                              "<td>" + Nombre16 + "</td>" +
+                              "<td>" + Lista16 + "</td>" +
+                              "<td>" + Clasificado16 + "</td>" +
+                              "<td>" + Tipo16 + "</td>" +
+                              "<td>" + Tipo216 + "</td>" +
+                              "<td>" + Formato16 + "</td>" +
+                              "<td>" + Folios16 + "</td>" +
+                              "<td>" + Precio16 + "</td>" +
+                              "<td>" + Importe16 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla17(){
+  var Numero17 = $('#Numero17').val();
+  var Lista17 = $('#Lista17').val();
+  var Clasificador17 = $('#Clasificador17').val();
+  var Codigo17 = $('#Codigo17').val();
+  var Fecha71 = $('#Fecha71').val();
+  var Tipo17 = $('#Tipo17').val();
+  var Descripcion17 = $('#Descripcion17').val();
+  var Valor17 = $('#Valor17').val();
+  var Ubicacion17 = $('#Ubicacion17').val();
+
+  $('#CuerpoTabla17').append("<tr>" + 
+                              "<td>" + Numero17 + "</td>" +
+                              "<td>" + Lista17 + "</td>" +
+                              "<td>" + Clasificador17 + "</td>" +
+                              "<td>" + Codigo17 + "</td>" +
+                              "<td>" + Fecha71 + "</td>" +
+                              "<td>" + Tipo17 + "</td>" +
+                              "<td>" + Descripcion17 + "</td>" +
+                              "<td>" + Valor17 + "</td>" +
+                              "<td>" + Ubicacion17 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla172(){
+  var Codigo172 = $('#Codigo172').val();
+  var Poliza172 = $('#Poliza172').val();
+  var Ejercicio172 = $('#Ejercicio172').val();
+  var Listado172 = $('#Listado172').val();
+  var Clasificador172 = $('#Clasificador172').val();
+  var Importe172 = $('#Importe172').val();
+
+  $('#CuerpoTabla172').append("<tr>" + 
+                              "<td>" + Codigo172 + "</td>" +
+                              "<td>" + Poliza172 + "</td>" +
+                              "<td>" + Ejercicio172 + "</td>" +
+                              "<td>" + Clasificador172 + "</td>" +
+                              "<td>" + Importe172 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla18(){
+  var Fecha18 = $('#Fecha18').val();
+  var Lista18 = $('#Lista18').val();
+  var Clasificador18 = $('#Clasificador18').val();
+  var Codigo18 = $('#Codigo18').val();
+  var Fecha218 = $('#Fecha218').val();
+  var Folio18 = $('#Folio18').val();
+  var Concepto18 = $('#Concepto18').val();
+  var Costo18 = $('#Costo18').val();
+  var Secretaria18 = $('#Secretaria18').val();
+  var Inventario18 = $('#Inventario18').val();
+  var Resguardante18 = $('#Resguardante18').val();
+  var Ubicacion18 = $('#Ubicacion18').val();
+
+
+
+  $('#CuerpoTabla18').append("<tr>" + 
+                              "<td>" + Fecha18 + "</td>" +
+                              "<td>" + Lista18 + "</td>" +
+                              "<td>" + Clasificador18 + "</td>" +
+                              "<td>" + Codigo18 + "</td>" +
+                              "<td>" + Fecha218 + "</td>" +
+                              "<td>" + Folio18 + "</td>" +
+                              "<td>" + Concepto18 + "</td>" +
+                              "<td>" + Costo18 + "</td>" +
+                              "<td>" + Secretaria18 + "</td>" +
+                              "<td>" + Inventario18 + "</td>" +
+                              "<td>" + Resguardante18 + "</td>" +
+                              "<td>" + Ubicacion18 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla19(){
+  var Numero19 = $('#Numero19').val();
+  var Tipo19 = $('#Tipo19').val();
+  var Proveedor19 = $('#Proveedor19').val();
+  var Objeto19 = $('#Objeto19').val();
+  var Periodo19 = $('#Periodo19').val();
+  var Monto19 = $('#Monto19').val();
+  var Devengado19 = $('#Devengado19').val();
+  var Saldo19 = $('#Saldo19').val();
+
+
+
+  $('#CuerpoTabla19').append("<tr>" + 
+                              "<td>" + Numero19 + "</td>" +
+                              "<td>" + Tipo19 + "</td>" +
+                              "<td>" + Proveedor19 + "</td>" +
+                              "<td>" + Objeto19 + "</td>" +
+                              "<td>" + Periodo19 + "</td>" +
+                              "<td>" + Monto19 + "</td>" +
+                              "<td>" + Devengado19 + "</td>" +
+                              "<td>" + Saldo19 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla192(){
+  var Poliza192 = $('#Poliza192').val();
+  var Lista192 = $('#Lista192').val();
+  var Importe192 = $('#Importe192').val();
+
+
+  $('#CuerpoTabla192').append("<tr>" + 
+                              "<td>" + Poliza192 + "</td>" +
+                              "<td>" + Lista192 + "</td>" +
+                              "<td>" + Importe192 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla193(){
+  var Poliza193 = $('#Poliza193').val();
+  var Lista193 = $('#Lista193').val();
+  var Importe193 = $('#Importe193').val();
+
+
+  $('#CuerpoTabla193').append("<tr>" + 
+                              "<td>" + Poliza193 + "</td>" +
+                              "<td>" + Lista193 + "</td>" +
+                              "<td>" + Importe193 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla20(){
+  var Numero20 = $('#Numero20').val();
+  var Responsable20 = $('#Responsable20').val();
+  var Ubicacion20 = $('#Ubicacion20').val();
+  var Combinacion20 = $('#Combinacion20').val();
+  var Marca20 = $('#Marca20').val();
+  var Modelo20 = $('#Modelo20').val();
+  var Serie20 = $('#Serie20').val();
+
+  $('#CuerpoTabla20').append("<tr>" + 
+                              "<td>" + Numero20 + "</td>" +
+                              "<td>" + Responsable20 + "</td>" +
+                              "<td>" + Ubicacion20 + "</td>" +
+                              "<td>" + Combinacion20 + "</td>" +
+                              "<td>" + Marca20 + "</td>" +
+                              "<td>" + Modelo20 + "</td>" +
+                              "<td>" + Serie20 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
 }
 
 function QuitarFila(row){
