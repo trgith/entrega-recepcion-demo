@@ -6226,7 +6226,7 @@
             <!-- Instrucciones -->
             <br>
       
-            <!-- Contenido -->
+            <!-- Relación de derechos a recibir en efectivo y equivalentes -->
             <div class="card">
               <div class="card-header">
                 Relación de derechos a recibir en efectivo y equivalentes
@@ -6240,7 +6240,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <label>Listado de cuentas</label>
-                      <input type="number" class="form-control" id="Lista25">
+                      <input type="text" class="form-control" id="Lista25">
                     </div>
                     <div class="col-md-6">
                       <label>Clasificador por rubro</label>
@@ -6266,7 +6266,7 @@
                     </div>
                     <div class="col-md-4">
                       <label>Fecha del comprobante fiscal digital</label>
-                      <input type="number" class="form-control" id="Fecha25">
+                      <input type="date" class="form-control" id="Fecha25">
                     </div>
                     <div class="col-md-4">
                       <label>Período de tiempo</label>
@@ -6299,11 +6299,10 @@
                               <th scope="col">Listado de Cuentas</th>
                               <th scope="col">Clasificador por rubro</th>
                               <th scope="col">Folio de comprobante digital FDI</th>
-                              <th scope="col">Código de relación</th>
-                              <th scope="col">Fecha adquisición</th>
-                              <th scope="col">Descripción del uso de inmueble</th>
-                              <th scope="col">Valor catastral</th>
-                              <th scope="col">Ubicación</th>
+                              <th scope="col">Importe</th>
+                              <th scope="col">Estatus de adeudo</th>
+                              <th scope="col">Fecha de comprobante</th>
+                              <th scope="col">Período de tiempo</th>
                               <th scope="col">Eliminar</th>
                             </tr>
                           </thead>
@@ -6321,7 +6320,92 @@
 
               </div>
             </div>
-            <!-- Contenido -->
+            <!-- Relación de derechos a recibir en efectivo y equivalentes -->
+            <br>
+
+            <!-- Conciliación de relación de derechos a recibir en efectivo y equivalentes -->
+            <div class="card">
+              <div class="card-header">
+                Conciliación de relación de derechos a recibir en efectivo y equivalentes
+              </div>
+              <div class="card-body">
+
+
+                <!-- Cuerpo -->
+                <!-- Ingresar Información -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label>Póliza de registro contable</label>
+                      <input type="text" class="form-control" id="Poliza252">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Listado de cuentas</label>
+                      <input type="text" class="form-control" id="Listado252">
+                    </div>
+                    <div class="col-md-6">
+                      <label>Importe</label>
+                      <input type="number" class="form-control" id="Importe252">
+                    </div>
+                  </div>
+                  <br>
+
+                  <div class="row">
+                    <div class="col-md-12 text-right">
+                      <button class="btn btn-success" onclick="AgregarTabla252()">Agregar</button>
+                    </div>
+                  </div>
+                  <br>
+                </div>
+                <!-- Ingresar Información -->
+
+                <!-- Tabla de Información -->
+                <div class="container">
+                  <div class="row">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th class="col-md-6">Póliza de registro contable</th>
+                              <th class="col-md-2">Listado de cuentas</th>
+                              <th class="col-md-2">Importe</th>
+                              <th class="col-md-2">Eliminar</th>
+                            </tr>
+                          </thead>
+                          <tbody id="CuerpoTabla252">
+                            <!-- Cuerpo de tabla -->
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                              <td class="col-md-10 text-right" colspan="2"><label>Total</label></td>
+                              <td class="col-md-2"><input type="number" class="form-control" readOnly></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="col-md-10 text-right" colspan="2"><label>Total de columna de saldo comprometido de Anexo 33</label></td>
+                              <td class="col-md-2"><input type="number" class="form-control"></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="col-md-10 text-right" colspan="2"><label>Igual a Cero</label></td>
+                              <td class="col-md-2"><input type="number" class="form-control" readOnly></td>
+                              <td></td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                  </div>
+                </div>
+                <!-- Tabla de Información -->
+
+                <!-- Cuerpo -->
+
+              </div>
+            </div>
+            <!-- Conciliación de relación de derechos a recibir en efectivo y equivalentes -->
       
             <!-- Boton para generar -->
             <br>
@@ -6661,6 +6745,60 @@ function VerDescripcion(){
     case '10':
       $('#descripcionAnexoCuerpo').html('El anexo se compone de dos hojas, el arqueo de caja y el fondo revolvente. El arqueo de caja es el análisis de las transacciones del efectivo, en un momento determinado, con el objeto de comprobar si se ha contabilizado todo el efectivo recibido y si el saldo que arroja esta cuenta corresponde con lo que se encuentra físicamente en caja en dinero efectivo, cheques o vales. El Fondo Revolvente son los recursos económicos asignados a los titulares de las Dependencias para sufragar gastos directamente.');
       break;
+    case '11':
+      $('#descripcionAnexoCuerpo').html('La conciliación bancaria son las cuentas del gobierno municipal que son administradas por la Tesorería, estas deberán ser desglosadas en depósitos contables no registrados por el banco, cuentas bancarias no contables y los cheques expedidos y contabilizados no comprobados, es decir, los que se encuentran en tránsito.');
+      break;
+    case '12':
+      $('#descripcionAnexoCuerpo').html('Se deberá llenar la información de cada una de las columnas del último cheque expedido por cada una de las cuentas, estos cheques deben de coincidir con la conciliación bancaria, así como la chequera entrega al momento del acto protocolario. ');
+      break;
+    case '13':
+      $('#descripcionAnexoCuerpo').html('Se deberá llenar la información de cada una de las columnas conforme a los cheques por entregar y las transferencias por realizar a beneficiarios recordando que debe de coincidir con la conciliación bancaria del anexo 11. Estos conceptos generalmente son por sueldos o salarios, programas sociales o pagos programados. ');
+      break;
+    case '14':
+      $('#descripcionAnexoCuerpo').html('Sólo se deberán ingresar las cuentas canceladas. Una vez que se ingrese se deberá entregar información física (oficio original) donde se acredite la cancelación de la cuenta correspondiente. ');
+      break;
+    case '15':
+      $('#descripcionAnexoCuerpo').html('La relación de padrón y contribuyentes es el registro de los datos de cada uno de los contribuyentes y sujetos obligados por la Legislación Fiscal y Hacendaria aplicable en el municipio. Se deberá entregar la Cédula del Impuesto Predial y los Derechos de suministros del agua. Asimismo, estos padrones deberán coincidir con los informes mensuales y anuales de la Secretaría de Finanzas y Administración y el Registro Civil del Estado (entregados físicamente al momento del acto protocolario) ');
+      break;
+    case '16':
+      $('#descripcionAnexoCuerpo').html('Este anexo esta relacionado con el anexo 23 (Control de Almacén) por lo que deberá coincidir en su totalidad cuando se presente el Acta Entrega. El inventario de formas valoradas son los documentos preimpresos, placas de circulación, permisos o concesiones, recibos oficiales y otros, que son utilizados para la prestación de los servicios a que se refiere la Ley de Derechos de cada Estado. ');
+      break;
+    case '17':
+      $('#descripcionAnexoCuerpo').html('Se deberá ingresar información de cada una de las escrituras públicas de los bienes que pertenecen al gobierno municipal, la cuál deberá coincidir con el catalogo de bienes del mismo. En la segunda hoja se ingresa el registro contable de cada una de las escrituras públicas descritas anteriormente. ');
+      break;
+    case '18':
+      $('#descripcionAnexoCuerpo').html('Forman parte del inventario de bienes municipales, mediante descripciones que refieran marca, modelo, serie, orden de compra, valor de adquisición, proveedor, uso, etc., los siguientes: <br>' + 
+      ' •	Muebles de oficina <br>' +
+      ' •	Máquinas y equipos de oficina <br>' +
+      ' •	Equipos de radio e instrumentos musicales. <br>' +
+      ' •	Libros, registrados por materia o tema, título, editorial, valor de adquisición, año de impresión, proveedor. <br>' +
+      ' •	Vehículos <br>' +
+      ' •	Maquinaria pesada: tipo de vehículo o maquinaria, marca, modelo, color, año de fabricación, número de motor, número de chasis, número de inscripción de registros, placa patente, avalúo fiscal, etc. <br>' +
+      ' •	Máquinas y herramientas: descripción, marca, modelo, serie, proveedor, valor de adquisición, etc. <br>' +
+      ' •	Materiales y otros: existencia física de bienes de consumo, tales como alimentos, vestuario, calzado, materiales y útiles de aseo, materiales para operación y mantenimiento, etc. Este tipo de bienes se registra en Almacén o Bodega, en las respectivas tarjetas de existencia <br>');
+      break;
+    case '19':
+      $('#descripcionAnexoCuerpo').html('Son todos los contratos que haya celebrado o firmado la administración municipal durante su periodo de gestión. Se deberán llenar todos los campos descritos, así como la presentación en físico que acredita la celebración del mismo.  Es importante destacar que el monto devengado y/o comprometido deberá coincidir con el Presupuesto de Egresos (Comprometido o Devengado), cada uno deberá especificarse en la Hoja 2 y 3, respectivamente');
+      break;
+    case '20':
+      $('#descripcionAnexoCuerpo').html('Las cajas fuertes generalmente se encuentran a resguardo de la Tesorería Municipal por lo que deberá especificarse la información correspondiente y las llaves se encuentran a resguardo de cada una de las Dependencias o Entidades las cuales deberán ser foliadas o enumeradas. Estas deberán entregarse en sobre sellados durante el acto protocolario. ');
+      break;
+    case '21':
+      $('#descripcionAnexoCuerpo').html('Los libros de sesión de cabildo están a resguardo de la Secretaria del Ayuntamiento, en el anexo se especifica la información relevante de cada uno, sin embargo, su presentación física es obligatoria. ');
+      break;
+    case '22':
+      $('#descripcionAnexoCuerpo').html('Las obras terminadas se especificarán por año fiscal (01 de enero al 31 de Diciembre) incluyendo monto de ejecución, contrato y avance ');
+      break;
+    case '23':
+      $('#descripcionAnexoCuerpo').html('El inventario deberá coincidir con el Anexo 16. El inventario consiste en el recuento de los bienes muebles e inmuebles; es decir, edificios, mobiliario, maquinaria, equipo y materiales que sean propiedad de una institución. Su finalidad es llevar a cabo un registro de la existencia, cantidad, características. ');
+      break;
+    case '24':
+      $('#descripcionAnexoCuerpo').html('Los bienes inmuebles es aquel bien que no se puede transportar de un lugar a otro debido a sus características. De tal forma, que su traslado supondría su destrucción o algún deterioro, ya que forma parte del terreno como edificios, áreas públicas, espacios abiertos, etc. ');
+      break;
+    case '25':
+      $('#descripcionAnexoCuerpo').html('Representan los derechos de cobro originados en el desarrollo de las actividades del ente público, de los cuales se espera recibir una contraprestación representada en recursos, bienes o servicios; en un plazo menor o igual a doce meses.');
+      break;
+
     default:
     alert('default' + numAnexo);
       break;
@@ -7272,6 +7410,40 @@ function AgregarTabla24(){
                               "<td>" + Descripcion24 + "</td>" +
                               "<td>" + Valor24 + "</td>" +
                               "<td>" + Ubicacion24 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla25(){
+  var Lista25 = $('#Lista25').val();
+  var Clasificador25 = $('#Clasificador25').val();
+  var Folio25 = $('#Folio25').val();
+  var Importe25 = $('#Importe25').val();
+  var Estatus25 = $('#Estatus25').val();
+  var Fecha25 = $('#Fecha25').val();
+  var Periodo25 = $('#Periodo25').val();
+
+  $('#CuerpoTabla25').append("<tr>" + 
+                              "<td>" + Lista25 + "</td>" +
+                              "<td>" + Clasificador25 + "</td>" +
+                              "<td>" + Folio25 + "</td>" +
+                              "<td>" + Importe25 + "</td>" +
+                              "<td>" + Estatus25 + "</td>" +
+                              "<td>" + Fecha25 + "</td>" +
+                              "<td>" + Periodo25 + "</td>" +
+                              "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
+                            "</tr>");
+}
+
+function AgregarTabla252(){
+  var Poliza252 = $('#Poliza252').val();
+  var Listado252 = $('#Listado252').val();
+  var Importe252 = $('#Importe252').val();
+
+  $('#CuerpoTabla252').append("<tr>" + 
+                              "<td>" + Poliza252 + "</td>" +
+                              "<td>" + Listado252 + "</td>" +
+                              "<td>" + Importe252 + "</td>" +
                               "<td><button class='btn btn-danger' onclick='QuitarFila(this)'>Quitar</button></td>" +
                             "</tr>");
 }
